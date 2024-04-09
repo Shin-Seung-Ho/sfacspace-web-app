@@ -1,21 +1,29 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import MenuItem from "./header-menu";
+import Image from 'next/image';
+import Link from 'next/link';
+import MenuItem from './header-menu';
 import {
   companySubMenu,
   servicesSubMenu,
   vouchersSubMenu,
-} from "@/app/config/constants";
+} from '@/app/config/constants';
 
 export default function TopBar() {
   return (
-    <header className="sticky top-0 z-30 w-full border-b-2 bg-transparent backdrop-blur-lg max-md:hidden">
-      <div className="flex items-center justify-between max-w-6xl mx-auto space-x-6">
-        <div className="flex-shrink-0">
-          <Image src="/sfacspace-logo.svg" alt="Logo" width={120} height={40} />
-        </div>
-        <nav className="flex space-x-4">
+    <header className="sticky top-0 z-30 w-full bg-transparent backdrop-blur-lg max-md:hidden">
+      <div className="mx-auto flex max-w-7xl items-center justify-between space-x-6 py-2">
+        <Link href="/">
+          <div className="flex-shrink-0">
+            <Image
+              src="/sfacspace-logo.svg"
+              alt="Logo"
+              width={120}
+              height={40}
+            />
+          </div>
+        </Link>
+        <nav className="flex gap-16 space-x-4">
           <MenuItem
             link="/company"
             label="기업정보"
@@ -34,7 +42,7 @@ export default function TopBar() {
           <MenuItem
             link="https://sniperfactory.notion.site/be9cbf38593c494dba33233032a92a4b?pvs=4"
             label="채용공고"
-            isBlank={true}
+            isBlank
           />
         </nav>
       </div>

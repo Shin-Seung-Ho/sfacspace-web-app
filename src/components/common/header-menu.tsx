@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { useState } from "react";
-import SubMenu from "./header-submenu";
+import Link from 'next/link';
+import { useState } from 'react';
+import SubMenu from './header-submenu';
 
 interface MenuItemProps {
   link: string;
@@ -34,13 +34,13 @@ export default function MenuItem({
     >
       {isBlank ? (
         <Link href={link} target="_blank">
-          <div className="text-gray-700 hover:text-gray-900 cursor-pointer">
+          <div className="cursor-pointer text-white hover:text-white">
             {label}
           </div>
         </Link>
       ) : (
         <Link href={link}>
-          <div className="text-gray-700 hover:text-gray-900 cursor-pointer">
+          <div className="cursor-pointer text-white hover:text-white">
             {label}
           </div>
         </Link>
