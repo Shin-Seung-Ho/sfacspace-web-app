@@ -34,13 +34,13 @@ export default function MenuItem({
     >
       {isBlank ? (
         <Link href={link} target="_blank">
-          <div className="cursor-pointer text-white hover:text-white">
+          <div className="cursor-pointer text-black hover:text-gray-500">
             {label}
           </div>
         </Link>
       ) : (
         <Link href={link}>
-          <div className="cursor-pointer text-white hover:text-white">
+          <div className="cursor-pointer text-black hover:text-gray-500">
             {label}
           </div>
         </Link>

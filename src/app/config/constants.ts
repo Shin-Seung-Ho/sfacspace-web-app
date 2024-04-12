@@ -1,5 +1,5 @@
 export const companySubMenu = [
-  { link: '/company/introduction', label: '회사소개' },
+  { link: '/company', label: '회사소개' },
   { link: '/company/history', label: '연혁' },
   { link: '/company/press', label: '보도자료' },
 ];
@@ -16,6 +16,12 @@ export const vouchersSubMenu = [
   { link: '/vouchers/ai', label: 'AI 바우처' },
   { link: '/vouchers/innovation', label: '혁신바우처' },
   { link: '/vouchers/tourism', label: '관광기업 혁신바우처' },
+];
+
+export const bannerBadge = [
+  { link: `/company`, label: '기업스토리' },
+  { link: `/company/history`, label: '연혁' },
+  { link: `/company/press`, label: '보도자료' },
 ];
 
 export const pracImg = [
@@ -48,5 +54,108 @@ export const pracImg = [
     title: '사진 5',
     content:
       '후회는 남기지 않았어 사랑했으니까 뭐 됐어 첫째 날부터 마지막 날까지 아 행복했던 날들이었다 (꿈만 같았었지) 이제 더는 없겠지만 지난 날로 남겨야지',
+  },
+];
+
+export const historyData = [
+  {
+    year: 2023,
+    events: [
+      {
+        month: '12월',
+        descriptions: [
+          '과학기술정보통신산업부 2023년 청년기업인 장관상 수상',
+          '대한상공회의소장 상 수상',
+        ],
+      },
+      {
+        month: '7월',
+        descriptions: [
+          {
+            content: [
+              '1. 뉴럴넷기반 해외 뉴스 요약 서비스 제공방법',
+              '2. 종목 관련 뉴스 기사 내 키워드 정보추출프로그램',
+              '3. 뉴스 번역 및 번역 표시 방법',
+            ],
+          },
+        ],
+      },
+      {
+        month: '5월',
+        descriptions: ['KDATA 주관 23년도 데이터바우처 15과제 최종선정'],
+      },
+      {
+        month: '4월',
+        descriptions: [
+          '중진공 글로벌 청년창업사관학교 4기 입소 선정',
+          'NIPA 주관 23년도 AI산업맞춤형 혁신바우처 4개과제 최종선정',
+          '연대캠퍼스 타운 입주기업 선정',
+        ],
+      },
+      {
+        month: '3월',
+        descriptions: [
+          '한국관광공사주관 23년도 관광기업혁신바우처 제공기업 선정정',
+          '- 서버 및 개발환경 구축분야',
+        ],
+      },
+    ],
+  },
+  {
+    year: 2022,
+    events: [
+      {
+        month: '12월',
+        descriptions: ['AI 특허 출원'],
+      },
+      {
+        month: '10월',
+        descriptions: [
+          '1. 뉴럴넷기반 해외 뉴스 요약 서비스 제공방법',
+          '2. 종목 관련 뉴스 기사 내 키워드 정보추출프로그램',
+          '3. 뉴스 번역 및 번역 표시 방법',
+        ],
+      },
+      {
+        month: '9월',
+        descriptions: ['KDATA 주관 23년도 데이터바우처 15과제 최종선정'],
+      },
+      {
+        month: '8월',
+        descriptions: [
+          '중진공 글로벌 청년창업사관학교 4기 입소 선정',
+          'NIPA 주관 23년도 AI산업맞춤형 혁신바우처 4개과제 최종선정',
+          '연대캠퍼스 타운 입주기업 선정',
+        ],
+      },
+      {
+        month: '6월',
+        descriptions: [
+          '한국관광공사주관 23년도 관광기업혁신바우처 제공기업 선정정',
+          '- 서버 및 개발환경 구축분야',
+        ],
+      },
+      {
+        month: '4월',
+        descriptions: [
+          '한국관광공사주관 23년도 관광기업혁신바우처 제공기업 선정정',
+          '- 서버 및 개발환경 구축분야',
+        ],
+      },
+      {
+        month: '3월',
+        descriptions: [
+          '한국관광공사주관 23년도 관광기업혁신바우처 제공기업 선정정',
+          '- 서버 및 개발환경 구축분야',
+        ],
+      },
+      {
+        month: '1월',
+        descriptions: [
+          '한국관광공사주관 23년도 관광기업혁신바우처 제공기업 선정정',
+          '- 서버 및 개발환경 구축분야',
+        ],
+      },
+    ],
   },
 ];
