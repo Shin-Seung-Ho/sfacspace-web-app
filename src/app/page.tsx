@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-mainlineimg1 max-h-screen w-full justify-center bg-white bg-cover">
+      <section className="max-h-screen·w-full·justify-center·bg-white·bg-mainlineimg1 bg-cover">
         <div className="mx-auto flex max-w-7xl items-center gap-12">
           <MotionDiv
             whileInView={{ y: 0, opacity: 1 }}
@@ -76,7 +76,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-mainlineimg2 max-h-screen w-full bg-white bg-cover py-36">
+      <section className="max-h-screen·w-full·bg-white·bg-mainlineimg2 bg-cover py-36">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-10">
           <MotionDiv
             whileInView={{ y: 0, opacity: 1 }}
