@@ -20,6 +20,8 @@ const config = {
     extend: {
       backgroundImage: {
         sfacspace: 'url("/bottom-sfac-logo.svg")',
+        mainlineimg1: 'url("/main-linebg.png")',
+        mainlineimg2: 'url("/main-linebg2.png")',
       },
       colors: {
         border: 'hsl(var(--border))',

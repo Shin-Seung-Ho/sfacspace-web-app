@@ -11,7 +11,7 @@ import {
 
 export default function BottomBar() {
   return (
-    <footer className="border bg-black bg-sfacspace bg-cover">
+    <footer className="border bg-[#060606] bg-opacity-100 bg-sfacspace bg-cover">
       <section className="mx-auto flex max-w-7xl flex-col gap-6 py-24">
         <Image
           src="/sfacspace-logo.svg"
