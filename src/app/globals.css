@@ -68,17 +68,17 @@
 
 @font-face {
   font-family: 'Pretendard-SemiBold';
-  src: url('/fonts/Pretendard-Bold.otf') format('opentype');
+  src: url('/font/Pretendard-Bold.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Pretendard-Medium';
-  src: url('/fonts/Pretendard-Medium.otf') format('opentype');
+  src: url('/font/Pretendard-Medium.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Pretendard-Regular';
-  src: url('/fonts/Pretendard-Regular.otf') format('opentype');
+  src: url('/font/Pretendard-Regular.otf') format('opentype');
 }
 
 @layer base {

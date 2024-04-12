@@ -11,8 +11,16 @@ import {
 
 export default function BottomBar() {
   return (
-    <footer className="border bg-[#060606] bg-opacity-100 bg-sfacspace bg-cover">
-      <section className="mx-auto flex max-w-7xl flex-col gap-6 py-24">
+    <footer className="relative border-t border-white border-opacity-20 bg-[#060606]">
+      <Image
+        src="/bottom-sfac-logo.svg"
+        width={0}
+        height={0}
+        style={{ width: '100%', height: '100%' }}
+        alt="bottom-sfac-logo"
+        className=" absolute"
+      />
+      <section className="relative z-10 mx-auto flex max-w-7xl flex-col gap-6 py-24">
         <Image
           src="/sfacspace-logo.svg"
           width={100}

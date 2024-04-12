@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-h-screen·w-full·justify-center·bg-white·bg-mainlineimg1 bg-cover">
+      <section className="max-h-screen w-full justify-center bg-white bg-mainlineimg1 bg-cover">
         <div className="mx-auto flex max-w-7xl items-center gap-12">
           <MotionDiv
             whileInView={{ y: 0, opacity: 1 }}
@@ -76,7 +76,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-h-screen·w-full·bg-white·bg-mainlineimg2 bg-cover py-36">
+      <section className="max-h-screen w-full bg-white bg-mainlineimg2 bg-cover py-36">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-10">
           <MotionDiv
             whileInView={{ y: 0, opacity: 1 }}
@@ -97,8 +97,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <div className="flex max-w-7xl flex-row">
+      <section className="min-h-screen w-full">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center">
+          <MotionDiv
+            whileInView={{ y: 0, opacity: 1 }}
+            initial={{ y: 30, opacity: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            <SectionTitle title="Solution" textWhite textCenter />
+          </MotionDiv>
+          <MotionDiv
+            whileInView={{ y: 0, opacity: 1 }}
+            initial={{ y: 30, opacity: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            <div className="text-center text-white">
+              <p className=" text-HB80">Computer Vision</p>
+              <p className="text-BM20">
+                인공지능을 통해 이미지와 비디오에서 오브젝트를 인식하고 변형하는
+                솔루션
+              </p>
+            </div>
+          </MotionDiv>
+          <Button className="flex items-center gap-2 rounded-full bg-[#47BFEF] text-BB20">
+            <p>자세히 보러가기</p>
+            <ArrowRight />
+          </Button>
+        </div>
+      </section>
+
+      <section className="min-h-screen w-full">
+        <div className="flex max-w-7xl flex-row py-20">
           <Carousel
             opts={{
               align: 'start',
