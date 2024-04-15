@@ -22,7 +22,7 @@ export default function BannerVideoCard({
         <video autoPlay loop muted className="rounded-[40px]">
           <source src={src} />
         </video>
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-5">
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-8">
           <div className="flex flex-col gap-5 text-white">
             <h2 className=" whitespace-pre-line text-center text-HB60">
               {title}
@@ -33,7 +33,7 @@ export default function BannerVideoCard({
             {bannerBadge.map((e, idx) => (
               // eslint-disable-next-line react/no-array-index-key
               <Link key={idx} href={e.link}>
-                <Badge className=" rounded-full bg-white bg-opacity-20 px-5 py-3 text-BM20 text-white backdrop:blur-lg">
+                <Badge className=" rounded-full bg-white bg-opacity-20 px-5 py-3 text-[16px] text-white backdrop:blur-lg">
                   {e.label}
                 </Badge>
               </Link>

@@ -7,7 +7,7 @@ import BannerVideoCard from '@/components/common/banner-video';
 
 export default function Page() {
   return (
-    <main className="min-h-screen w-full">
+    <main className=" w-full">
       <BannerVideoCard
         src="/company/company-banner-video.mp4"
         title={`AI solutions
@@ -142,14 +142,17 @@ export default function Page() {
         </div>
       </section>
 
-      <section className=" relative flex items-center bg-[#F7F7F7]">
-        <Image
-          src="/company/company-voucherbg.png"
-          width={1440}
-          height={0}
-          style={{ width: '100%', height: '100%' }}
-          alt="companyVoucherbg"
-        />
+      <section className=" flex h-[350px] items-center bg-[#F7F7F7]">
+        <div className="relative h-full w-full">
+          <Image
+            src="/company/company-voucherbg.png"
+            width={1400}
+            height={0}
+            style={{ width: '100%', height: '100%' }}
+            alt="companyVoucherbg"
+            className="object-cover"
+          />
+        </div>
         <div className=" absolute flex flex-col px-24">
           <p className=" py-1 text-BM20 text-[#47BFEF]">Voucher</p>
           <p className=" text-BB24">
