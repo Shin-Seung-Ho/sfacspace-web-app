@@ -13,7 +13,7 @@ interface HistoryProps {
 export default function History({ idx, year, events }: HistoryProps) {
   return (
     <div
-      className={`flex ${idx % 2 === 1 ? 'flex-row-reverse' : 'flex-row text-right'}`}
+      className={`flex gap-4 ${idx % 2 === 1 ? 'flex-row-reverse' : 'flex-row text-right'}`}
     >
       <div className="flex w-1/2 flex-col gap-12 px-2">
         <p className="text-HB60 font-bold text-[#47BFEF]">{year}</p>

@@ -7,11 +7,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import NewsCard from './(page)/components/news-card';
 import { pracImg } from './config/constants';
 import MotionDiv from '@/components/common/motion-div';
 import SectionTitle from './(page)/components/section-title';
 import { Button } from '@/components/ui/button';
+import MainNewsCard from './(page)/components/news-card';
 
 export default function Home() {
   return (
@@ -158,7 +158,11 @@ export default function Home() {
                   // eslint-disable-next-line react/no-array-index-key
                   key={idx}
                 >
-                  <NewsCard img={e.img} title={e.title} content={e.content} />
+                  <MainNewsCard
+                    img={e.img}
+                    title={e.title}
+                    content={e.content}
+                  />
                 </CarouselItem>
               ))}
             </CarouselContent>
