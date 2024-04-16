@@ -57,7 +57,15 @@ export const pracImg = [
   },
 ];
 
-export const historyData = [
+interface HistoryData {
+  year: number;
+  events: {
+    month: string;
+    descriptions: (string | { content: string[] })[];
+  }[];
+}
+
+export const historyData: HistoryData[] = [
   {
     year: 2023,
     events: [
@@ -71,6 +79,7 @@ export const historyData = [
       {
         month: '7월',
         descriptions: [
+          'AI 특허 3개 출원',
           {
             content: [
               '1. 뉴럴넷기반 해외 뉴스 요약 서비스 제공방법',
@@ -95,8 +104,7 @@ export const historyData = [
       {
         month: '3월',
         descriptions: [
-          '한국관광공사주관 23년도 관광기업혁신바우처 제공기업 선정정',
-          '- 서버 및 개발환경 구축분야',
+          '한국관광공사주관 23년도 관광기업혁신바우처 제공기업 선정 - 서버 및 개발환경 구축분야',
         ],
       },
     ],
@@ -106,55 +114,117 @@ export const historyData = [
     events: [
       {
         month: '12월',
-        descriptions: ['AI 특허 출원'],
+        descriptions: [
+          'AI 특허 출원',
+          {
+            content: [
+              '객체가 포함된 실내 공간의 이미지를 재구성함으로써 부동산 중개용 정보를 생성하는 방법, 서버 및 컴퓨터 프로그램',
+            ],
+          },
+        ],
       },
       {
         month: '10월',
         descriptions: [
-          '1. 뉴럴넷기반 해외 뉴스 요약 서비스 제공방법',
-          '2. 종목 관련 뉴스 기사 내 키워드 정보추출프로그램',
-          '3. 뉴스 번역 및 번역 표시 방법',
+          'AI 특허 출헌',
+          'U-net 구조와 GAN AI 네크워크를 활용한 픽셀 재구성 AI',
         ],
       },
       {
         month: '9월',
-        descriptions: ['KDATA 주관 23년도 데이터바우처 15과제 최종선정'],
+        descriptions: [
+          'AI 가전 산업 육성을 위한 상용화 지원 플랫폼 구축 공급기업 선정',
+          'AI 특허 4건 출원',
+          {
+            content: [
+              '전이학습 기반 자연어 처리 모델들을 훈련시키는 방법 및 시스템',
+              '인공지능 기반 실시간 뉴스 크롤링 및 뉴스 요약검증 서비스 제공방법',
+              '인공지능 기반 뉴스 분류 시스템',
+              '자연어 처리 기술을 이용한 쿼리 생성 시스템 및 이를 포함하는 질의 응답 시스템',
+            ],
+          },
+        ],
       },
       {
         month: '8월',
         descriptions: [
-          '중진공 글로벌 청년창업사관학교 4기 입소 선정',
-          'NIPA 주관 23년도 AI산업맞춤형 혁신바우처 4개과제 최종선정',
-          '연대캠퍼스 타운 입주기업 선정',
+          '해외주식 투자자를 위한 AI기반 글로벌 뉴스 번역 서비스 ‘장전’ 앱 출시 (베타버전)',
         ],
       },
       {
         month: '6월',
         descriptions: [
-          '한국관광공사주관 23년도 관광기업혁신바우처 제공기업 선정정',
-          '- 서버 및 개발환경 구축분야',
+          '과기정통부 주관 22년도 AI 인력양성 바우처’ 3개 과제 최종 선정',
         ],
       },
       {
         month: '4월',
-        descriptions: [
-          '한국관광공사주관 23년도 관광기업혁신바우처 제공기업 선정정',
-          '- 서버 및 개발환경 구축분야',
-        ],
+        descriptions: ['중진공 청년사업사관학교 12기 입소 선정'],
       },
       {
         month: '3월',
         descriptions: [
-          '한국관광공사주관 23년도 관광기업혁신바우처 제공기업 선정정',
-          '- 서버 및 개발환경 구축분야',
+          '과기정동부 주관 22년도 AI바우처 과제 최종 선정',
+          '경기도경제과학진흥원 기술창업 프로그램 우수기업 선정',
         ],
       },
       {
         month: '1월',
         descriptions: [
-          '한국관광공사주관 23년도 관광기업혁신바우처 제공기업 선정정',
-          '- 서버 및 개발환경 구축분야',
+          '인천대학교 산학협력단과 협약 체결',
+          'AI 특허 출원',
+          {
+            content: [
+              '업샘플링(super resol) = Wavelet 기반의 AI 복원에 유리한 이미지 압축 기술 및 그에 상응하는 U-net 기반의 업샘플링 AI 엔진',
+              'cycleGAN 네트워크를 통한 학습 데이터 생성 및 AI 엔진 성능 향상 모델',
+              'cycleGAN v2 네트워크를 통해 기존 이미지를 특정 화풍으로 변환 및 생성',
+              'cuDNN 구조를 응용한 영상 내의 물질을 인식 및 제거하는 cycleGAN AI 네트워크 모델',
+            ],
+          },
         ],
+      },
+    ],
+  },
+  {
+    year: 2021,
+    events: [
+      {
+        month: '12월',
+        descriptions: [
+          '혁신성장유형 벤처기업 인증 취득',
+          '과기정통부 주관 22 AI 바우처 공급기업 선정',
+        ],
+      },
+      {
+        month: '11월',
+        descriptions: [
+          'AI 특허 출원',
+          {
+            content: [
+              'CNN Dailymail 기반 티커의 데이터셋을 나눠 뉴스 데이터셋, 티커가 연동되게 만들어 뉴스 카테고리를 분석하는 AI 엔진',
+              'Seq to Seq 모델을 활용한 Neural Machine Translation Modle',
+            ],
+          },
+        ],
+      },
+      {
+        month: '10월',
+        descriptions: ['CNN 기반 카테고리 분석 AI 솔루션 개발'],
+      },
+      {
+        month: '9월',
+        descriptions: [
+          '과기정통부 주관 22 데이터 바우처’ 공급기업 선정',
+          '기업부설연구서 설립 인정',
+        ],
+      },
+      {
+        month: '6월',
+        descriptions: ['인덕대학교 캠퍼스타운 창업지원 프로그램 입주기업 선정'],
+      },
+      {
+        month: '3월',
+        descriptions: ['주식회사 스팩스페이스 설립'],
       },
     ],
   },
