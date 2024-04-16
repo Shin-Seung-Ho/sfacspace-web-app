@@ -1,3 +1,5 @@
+import MotionDiv from '@/components/common/motion-div';
+
 /* eslint-disable react/no-array-index-key */
 interface Event {
   month: string;
@@ -11,10 +13,17 @@ interface HistoryProps {
 }
 
 export default function History({ idx, year, events }: HistoryProps) {
+  const initialX = idx % 2 === 1 ? 100 : -100;
   return (
-    <div
+    <MotionDiv
+      whileInView={{ x: 0, opacity: 1 }}
+      initial={{ x: initialX, opacity: 0 }}
+      transition={{ duration: 1, delay: 0 }}
       className={`flex gap-4 ${idx % 2 === 1 ? 'flex-row-reverse' : 'flex-row text-right'}`}
     >
+      {/* <div
+        className={`flex gap-4 ${idx % 2 === 1 ? 'flex-row-reverse' : 'flex-row text-right'}`}
+      > */}
       <div className="flex w-1/2 flex-col gap-12 px-2">
         <p className="text-HB60 font-bold text-[#47BFEF]">{year}</p>
         {events.map((event, index) => (
@@ -23,7 +32,7 @@ export default function History({ idx, year, events }: HistoryProps) {
             {event.descriptions.map((description, j) => (
               <div key={j} className="mt-4">
                 {typeof description === 'string' ? (
-                  <p className="text-BM16 font-bold">{description}</p>
+                  <p className="text-BM16 font-semibold">{description}</p>
                 ) : (
                   description.content.map((item: string, i: number) => (
                     <p key={i} className="text-BM16">
@@ -48,6 +57,7 @@ export default function History({ idx, year, events }: HistoryProps) {
           <div className="h-full w-1 bg-gradient-to-b from-[#47BFEF] to-white" />
         </div>
       )}
-    </div>
+      {/* </div> */}
+    </MotionDiv>
   );
 }

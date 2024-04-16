@@ -3,6 +3,7 @@ import Image from 'next/image';
 import BannerVideoCard from '@/components/common/banner-video';
 import History from './components/history';
 import { historyData } from '@/app/config/constants';
+import MotionDiv from '@/components/common/motion-div';
 
 export default function Page() {
   return (
@@ -14,17 +15,28 @@ export default function Page() {
         description="성장과 반전을 통해 나아가는 스팩스페이스의 여정에 함께 하세요!"
       />
 
-      <section className="flex h-[700px] items-center">
+      <section className="flex h-[600px] items-center">
         <div className="mx-auto w-full max-w-3xl">
           <div className="flex w-full flex-col gap-10 text-HB48">
-            <p>해마다 성장하며,</p>
-            <div className="flex items-center justify-end gap-3">
+            <MotionDiv
+              whileInView={{ x: 0, opacity: 1 }}
+              initial={{ x: -100, opacity: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <p>해마다 성장하며,</p>
+            </MotionDiv>
+            <MotionDiv
+              whileInView={{ x: 0, opacity: 1 }}
+              initial={{ x: 100, opacity: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="flex items-center justify-end gap-3"
+            >
               <div>발전해 나아가는</div>
               <div className="relative font-extrabold">
                 <p className="relative z-50"> 스팩스페이스</p>
                 <div className="absolute bottom-0 z-0 h-3/5 w-full bg-[#B5E5F9]" />
               </div>
-            </div>
+            </MotionDiv>
           </div>
         </div>
       </section>
@@ -40,9 +52,15 @@ export default function Page() {
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-8">
             <div className="flex flex-col items-center gap-36 text-white">
-              <h2 className=" text-HB60">
-                과거에서부터 미래를 향한 우리의 성장 이야기
-              </h2>
+              <MotionDiv
+                whileInView={{ y: 0, opacity: 1, scale: 1 }}
+                initial={{ y: 10, opacity: 0, scale: 0 }}
+                transition={{ duration: 1, delay: 0.2 }}
+              >
+                <h2 className=" text-HB60">
+                  과거에서부터 미래를 향한 우리의 성장 이야기
+                </h2>
+              </MotionDiv>
               <div className="flex max-w-7xl gap-10 whitespace-pre-line break-keep text-BR20 text-[#A0A0A0]">
                 <p>
                   (주) 스팩스페이스는 NLP와 Computer Vision을 기반으로 한 AI
