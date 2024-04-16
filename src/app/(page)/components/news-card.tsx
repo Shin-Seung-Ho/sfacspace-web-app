@@ -3,13 +3,17 @@
 import Image from 'next/image';
 import { Card, CardDescription, CardTitle } from '@/components/ui/card';
 
-interface NewsCardProps {
+interface MainNewsCardProps {
   img: string;
   title: string;
   content: string;
 }
 
-export default function NewsCard({ img, title, content }: NewsCardProps) {
+export default function MainNewsCard({
+  img,
+  title,
+  content,
+}: MainNewsCardProps) {
   return (
     <Card>
       <Image src={img} width={200} height={200} alt="newsImg" />
