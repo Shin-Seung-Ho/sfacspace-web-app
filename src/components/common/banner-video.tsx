@@ -4,6 +4,7 @@
 import Link from 'next/link';
 import { Badge } from '../ui/badge';
 import { bannerBadge } from '@/app/config/constants';
+import MotionDiv from './motion-div';
 
 interface BannerVideoCardProps {
   src: string;
@@ -17,12 +18,17 @@ export default function BannerVideoCard({
   description,
 }: BannerVideoCardProps) {
   return (
-    <section className=" mx-auto min-h-screen max-w-[1600px]">
-      <div className="relative flex justify-center">
+    <section className=" mx-auto min-h-screen max-w-[1360px]">
+      <div className="relative flex justify-center py-10">
         <video autoPlay loop muted className="rounded-[40px]">
           <source src={src} />
         </video>
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-8">
+        <MotionDiv
+          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ y: 30, opacity: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="absolute inset-0 flex flex-col items-center justify-center gap-8"
+        >
           <div className="flex flex-col gap-5 text-white">
             <h2 className=" whitespace-pre-line text-center text-HB60">
               {title}
@@ -39,7 +45,8 @@ export default function BannerVideoCard({
               </Link>
             ))}
           </div>
-        </div>
+        </MotionDiv>
+        {/* <div className="absolute inset-0 flex flex-col items-center justify-center gap-8" /> */}
       </div>
     </section>
   );

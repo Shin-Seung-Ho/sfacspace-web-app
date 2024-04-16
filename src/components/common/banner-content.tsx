@@ -19,7 +19,7 @@ export default function BannerCard({
 }: BannerCardProps) {
   const path = usePathname();
   return (
-    <section className=" mx-auto my-10 max-w-[1600px]">
+    <section className=" mx-auto my-10 max-w-7xl">
       <div className="relative flex justify-center">
         <Image
           src={src}

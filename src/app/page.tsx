@@ -17,18 +17,31 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-black">
       <section className=" flex h-screen w-full flex-col items-center justify-center ">
-        <Image
-          src="/main-halfcircle.png"
-          width={1200}
-          height={600}
-          alt="halfcircle"
-          className="absolute top-0"
-        />
-        <h1 className="z-10 text-center text-HB48 text-white">
-          {' '}
-          기업 향상을 위한 <br /> 독자적인 솔루션 <br /> 오직{' '}
-          <span className="text-[#47BFEF]">SFACSPACE</span>에서
-        </h1>
+        <MotionDiv
+          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ y: -300, opacity: 0 }}
+          transition={{ duration: 1, delay: 0 }}
+          className=" absolute top-0"
+        >
+          <Image
+            src="/main-halfcircle.png"
+            width={1200}
+            height={600}
+            alt="halfcircle"
+          />
+        </MotionDiv>
+        <MotionDiv
+          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ y: 100, opacity: 0 }}
+          transition={{ duration: 1, delay: 0 }}
+          className=" z-10"
+        >
+          <h1 className=" text-center text-HB48 text-white">
+            {' '}
+            기업 향상을 위한 <br /> 독자적인 솔루션 <br /> 오직{' '}
+            <span className="text-[#47BFEF]">SFACSPACE</span>에서
+          </h1>
+        </MotionDiv>
         <div className="absolute bottom-0 flex animate-bounce flex-col items-center pb-20">
           <Mouse color="#b4b4b4" className=" h-10 w-10" />
           <ChevronsDown color="#b4b4b4" />
