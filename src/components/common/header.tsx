@@ -11,7 +11,7 @@ import {
 
 export default function TopBar() {
   return (
-    <header className="sticky top-0 z-30 w-full rounded-b-xl bg-white bg-opacity-30 backdrop-blur-lg transition duration-500 ease-in-out hover:bg-opacity-100 hover:py-8 max-md:hidden">
+    <header className="sticky top-0 z-30 w-full rounded-b-xl bg-white bg-opacity-30 py-[30px] backdrop-blur-lg transition duration-500 ease-in-out hover:bg-opacity-100 max-md:hidden">
       <div className="mx-auto flex max-w-7xl items-center justify-between space-x-6 py-2">
         <Link href="/">
           <div className="flex-shrink-0">

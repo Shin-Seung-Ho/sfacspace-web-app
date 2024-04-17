@@ -18,6 +18,24 @@ export const vouchersSubMenu = [
   { link: '/vouchers/tourism', label: '관광기업 혁신바우처' },
 ];
 
+export const serviceData = [
+  {
+    src: '',
+    description: '서학개미 필수 앱! 국내 최초 실시간 해외뉴스 서비스',
+    buttonsrc: '',
+  },
+  {
+    src: '',
+    description: '프롭테크의 시대, 공인중개사의 필수 매물 사진첩',
+    buttonsrc: '',
+  },
+  {
+    src: '',
+    description: 'Snipe your dream 너의 스펙이 되어줄게',
+    buttonsrc: '',
+  },
+];
+
 export const bannerBadge = [
   { link: `/company`, label: '기업스토리' },
   { link: `/company/history`, label: '연혁' },
