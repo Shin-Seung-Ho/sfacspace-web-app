@@ -1,9 +1,10 @@
 /* eslint-disable react/no-array-index-key */
 import Image from 'next/image';
 import BannerVideoCard from '@/components/common/banner-video';
-import History from './components/history';
 import { historyData } from '@/app/config/constants';
 import MotionDiv from '@/components/common/motion-div';
+import History from './components/history';
+import { TracingBeam } from '@/components/ui/tracing-beam';
 
 export default function Page() {
   return (
@@ -81,12 +82,14 @@ export default function Page() {
       </section>
 
       <section className="mx-auto max-w-7xl py-20">
-        {historyData.map((e, idx) => (
-          <div className={` ${idx % 2 === 1 ? '' : ''} `}>
-            <History key={idx} year={e.year} idx={idx} events={e.events} />
-            <div className="my-20" />
-          </div>
-        ))}
+        <TracingBeam className="">
+          {historyData.map((e, idx) => (
+            <div>
+              <History key={idx} year={e.year} events={e.events} />
+              <div className="my-20" />
+            </div>
+          ))}
+        </TracingBeam>
       </section>
     </main>
   );
