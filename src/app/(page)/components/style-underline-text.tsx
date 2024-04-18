@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 
@@ -15,8 +16,11 @@ export default function StyleUnderLineText({
   const service = ['JANGJEON', '집찍고', 'SNIPERFACTORY'];
   const [selectedText, setSelectedText] = useState('JANGJEON');
 
-  const handleClick = (text: any) => {
+  const handleClick = (text: any, index: number) => {
     setSelectedText(text);
+    if (onContainerSlide) {
+      onContainerSlide(index);
+    }
   };
 
   return (
@@ -25,7 +29,7 @@ export default function StyleUnderLineText({
         <div key={idx} className="relative cursor-pointer">
           <div
             className={`relative z-50 text-HB28 font-bold ${selectedText === text ? '' : ' text-[#929292]'}`}
-            onClick={() => handleClick(text)}
+            onClick={() => handleClick(text, idx)}
           >
             {text}
           </div>
