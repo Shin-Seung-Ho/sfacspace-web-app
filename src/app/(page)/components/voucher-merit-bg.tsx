@@ -23,12 +23,12 @@ export default function VoucherMeritBG() {
       className={cn(
         'flex w-full items-center bg-black bg-opacity-50 duration-500',
         hoveredCard === 0
-          ? 'bg-meritimg1 bg-opacity-100 bg-cover'
+          ? 'bg-meritimg1 bg-cover opacity-100'
           : hoveredCard === 1
-            ? 'bg-meritimg2 bg-opacity-100 bg-cover'
+            ? 'bg-meritimg2 bg-cover opacity-100'
             : hoveredCard === 2
-              ? 'bg-meritimg3 bg-opacity-100 bg-cover'
-              : 'bg-meritimg1 bg-opacity-100 bg-cover',
+              ? 'bg-meritimg3 bg-cover opacity-100'
+              : 'bg-meritimg1 bg-cover opacity-100',
       )}
     >
       {voucherMerit.map((e, idx) => (
