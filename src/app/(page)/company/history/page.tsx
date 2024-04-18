@@ -1,9 +1,10 @@
 /* eslint-disable react/no-array-index-key */
 import Image from 'next/image';
 import BannerVideoCard from '@/components/common/banner-video';
-import History from './components/history';
 import { historyData } from '@/app/config/constants';
 import MotionDiv from '@/components/common/motion-div';
+import History from './components/history';
+import { TracingBeam } from '@/components/ui/tracing-beam';
 
 export default function Page() {
   return (
@@ -15,7 +16,7 @@ export default function Page() {
         description="성장과 반전을 통해 나아가는 스팩스페이스의 여정에 함께 하세요!"
       />
 
-      <section className="flex h-[600px] items-center">
+      {/* <section className="flex h-[600px] items-center">
         <div className="mx-auto w-full max-w-3xl">
           <div className="flex w-full flex-col gap-10 text-HB48">
             <MotionDiv
@@ -39,7 +40,7 @@ export default function Page() {
             </MotionDiv>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="w-full">
         <div className="relative h-[800px]">
@@ -81,12 +82,14 @@ export default function Page() {
       </section>
 
       <section className="mx-auto max-w-7xl py-20">
-        {historyData.map((e, idx) => (
-          <div className={` ${idx % 2 === 1 ? '' : ''} `}>
-            <History key={idx} year={e.year} idx={idx} events={e.events} />
-            <div className="my-20" />
-          </div>
-        ))}
+        <TracingBeam className="">
+          {historyData.map((e, idx) => (
+            <div>
+              <History key={idx} year={e.year} events={e.events} />
+              <div className="my-20" />
+            </div>
+          ))}
+        </TracingBeam>
       </section>
     </main>
   );

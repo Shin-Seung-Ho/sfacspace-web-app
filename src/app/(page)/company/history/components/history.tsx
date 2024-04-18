@@ -7,57 +7,41 @@ interface Event {
 }
 
 interface HistoryProps {
-  idx: number;
   year: number;
   events: Event[];
 }
 
-export default function History({ idx, year, events }: HistoryProps) {
-  const initialX = idx % 2 === 1 ? 100 : -100;
+export default function History({ year, events }: HistoryProps) {
   return (
     <MotionDiv
       whileInView={{ x: 0, opacity: 1 }}
-      initial={{ x: initialX, opacity: 0 }}
+      initial={{ x: 100, opacity: 0 }}
       transition={{ duration: 1, delay: 0 }}
-      className={`flex gap-4 ${idx % 2 === 1 ? 'flex-row-reverse' : 'flex-row text-right'}`}
+      className="flex"
     >
-      {/* <div
-        className={`flex gap-4 ${idx % 2 === 1 ? 'flex-row-reverse' : 'flex-row text-right'}`}
-      > */}
-      <div className="flex w-1/2 flex-col gap-12 px-2">
+      <div className="flex flex-col gap-12">
         <p className="text-HB60 font-bold text-[#47BFEF]">{year}</p>
         {events.map((event, index) => (
-          <div key={index}>
+          <div key={index} className="flex items-start gap-20">
             <p className="text-HB28">{event.month}</p>
-            {event.descriptions.map((description, j) => (
-              <div key={j} className="mt-4">
-                {typeof description === 'string' ? (
-                  <p className="text-BM16 font-semibold">{description}</p>
-                ) : (
-                  description.content.map((item: string, i: number) => (
-                    <p key={i} className="text-BM16">
-                      ㆍ <span>{item}</span>
-                    </p>
-                  ))
-                )}
-              </div>
-            ))}
+            <div>
+              {event.descriptions.map((description, j) => (
+                <div key={j} className="mt-4">
+                  {typeof description === 'string' ? (
+                    <p className="text-BM16 font-semibold">{description}</p>
+                  ) : (
+                    description.content.map((item: string, i: number) => (
+                      <p key={i} className="text-BM16">
+                        ㆍ <span>{item}</span>
+                      </p>
+                    ))
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>
-      {idx % 2 === 0 && (
-        <div className="flex flex-col items-center py-4">
-          <div className=" h-4 w-4 rounded-full bg-[#47BFEF]" />
-          <div className="h-full w-1 bg-gradient-to-b from-[#47BFEF] to-white" />
-        </div>
-      )}
-      {idx % 2 === 1 && (
-        <div className="flex flex-col items-center py-4">
-          <div className=" h-4 w-4 rounded-full bg-[#47BFEF]" />
-          <div className="h-full w-1 bg-gradient-to-b from-[#47BFEF] to-white" />
-        </div>
-      )}
-      {/* </div> */}
     </MotionDiv>
   );
 }
