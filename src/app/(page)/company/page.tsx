@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import BannerVideoCard from '@/components/common/banner-video';
+import ItemCard from './components/item-card';
 
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
         With SFACSPACE!`}
         description="스팩스페이스는 인공지능 기술과 데이터 처리를 활용한 독자적인 솔류션을 개발합니다."
       />
+
       <section className=" relative flex items-center justify-center">
         <Image
           src="/company/company-descriptionbg.png"
@@ -31,7 +33,7 @@ export default function Page() {
         </p>
       </section>
 
-      <section className="min-h-screen">
+      {/* <section className="min-h-screen">
         <div className="flex h-screen items-center">
           <div className=" relative h-1/2 w-full bg-[#FF8880] ">
             <Image
@@ -92,6 +94,55 @@ export default function Page() {
             </div>
           </div>
         </div>
+      </section> */}
+
+      <section className="min-h-screen py-44">
+        <div className="mx-auto flex max-w-7xl flex-col">
+          <p className="text-center text-HB48 font-extrabold">
+            스팩스페이스의 다양한 <br /> 비전으로
+          </p>
+          <p className="py-5 text-center text-BM20">
+            스팩스페이스는 더 나은 미래를 위해 오늘도 나아가고 있습니다.
+          </p>
+          <div className="flex flex-col gap-44 py-12">
+            <ItemCard
+              bgcolor="bg-[#E66060]"
+              bgimg="/company/company-jangjeon-logo.svg"
+              bgimgWidth={1600}
+              itemimg="/company/company-jangjeon-item.png"
+              itemimgWidth={500}
+              itemName="장전"
+              itemDescription={`서학개미 필수 앱! \n 국내최초 실시간 해외뉴스 서비스`}
+              itemContent="장전은 실시간 해외주식 관련 정보부터
+            인공지능 감성분석까지 하나의 앱에서 이용가능한
+            해외주식투자자 맞춤형 플랫폼 입니다."
+            />
+            <ItemCard
+              bgcolor="bg-[#FFA564]"
+              bgimg="/company/company-pilo-logo.svg"
+              bgimgWidth={800}
+              itemimg="/company/company-jjiggo.png"
+              itemimgWidth={300}
+              itemName="집찍고"
+              itemDescription={`프롭테크의 시대,\n 공인중개사의 필수 매물 사진첩`}
+              itemContent="집찍고는 AI 기반 객체 인식을 통한 매물사진 편집은 물론,
+            간편한 매물 인증과 관리를 할 수 있는 프롭테크의 시대
+            공인중개사 필수 매물 사진첩입니다."
+            />
+            <ItemCard
+              bgcolor="bg-[#8CC1FF]"
+              bgimg="/company/company-sniperfactory-symbol.svg"
+              bgimgWidth={350}
+              itemimg="/company/company-sniperfactory.png"
+              itemimgWidth={500}
+              itemName="스나이퍼팩토리"
+              itemDescription={`Snipe your dream \n 너의 스펙이 되어줄게`}
+              itemContent="교육뿐만 아니라 미래에 대한 취업, 자소서, 포트폴리오 고민까지
+            ‘스팩'은 교육생분들과 함께 고민하여 나아가며
+            모두가 양질의 교육을 제공받을 수 있는 교육 서비스입니다."
+            />
+          </div>
+        </div>
       </section>
 
       <section className="flex flex-col gap-14 py-24">
@@ -142,7 +193,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className=" flex h-[350px] items-center bg-[#F7F7F7]">
+      <section className=" flex h-[350px] items-center justify-center bg-[#F7F7F7]">
         <div className="relative h-full w-full">
           <Image
             src="/company/company-voucherbg.png"
@@ -153,7 +204,7 @@ export default function Page() {
             className="object-cover"
           />
         </div>
-        <div className=" absolute flex flex-col px-24">
+        <div className=" absolute mx-auto flex w-full max-w-7xl flex-col">
           <p className=" py-1 text-BM20 text-[#47BFEF]">Voucher</p>
           <p className=" text-BB24">
             6,000만원 규모 AI 가공 솔루션 지원 사업을

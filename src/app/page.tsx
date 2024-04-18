@@ -14,7 +14,6 @@ import { Button } from '@/components/ui/button';
 import MainNewsCard from './(page)/components/news-card';
 import { SparklesCore } from '@/components/ui/sparkles';
 import ParentComponent from './(page)/components/container-slider';
-import KakaoMap from './(page)/components/kakaomap';
 
 export default function Home() {
   return (
@@ -45,7 +44,7 @@ export default function Home() {
             <span className="text-[#47BFEF]">SFACSPACE</span>에서
           </h1>
         </MotionDiv>
-        <div className="absolute bottom-0 flex animate-bounce flex-col items-center pb-20">
+        <div className="absolute bottom-0 flex animate-bounce flex-col items-center pb-10">
           <Mouse color="#b4b4b4" className=" h-10 w-10" />
           <ChevronsDown color="#b4b4b4" />
         </div>
@@ -189,10 +188,6 @@ export default function Home() {
             <CarouselNext className="bg-white" />
           </Carousel>
         </div>
-      </section>
-
-      <section className=" min-h-screen w-full bg-white">
-        <KakaoMap />
       </section>
     </main>
   );
