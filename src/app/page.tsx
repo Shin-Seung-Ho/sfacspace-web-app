@@ -14,6 +14,7 @@ import { Button } from '@/components/ui/button';
 import MainNewsCard from './(page)/components/news-card';
 import { SparklesCore } from '@/components/ui/sparkles';
 import ParentComponent from './(page)/components/container-slider';
+import VoucherMeritBG from './(page)/components/voucher-merit-bg';
 
 export default function Home() {
   return (
@@ -67,19 +68,6 @@ export default function Home() {
             최신 기술, 바우처 사업으로 더 나은 미래를 꿈꿉니다.
           </p>
           <ParentComponent />
-          {/* <div className=" mx-auto w-[1360px] min-w-[1360px] pl-80 pr-80">
-            <div className="mx-auto flex h-auto flex-col justify-center space-y-16 text-center">
-              <div>
-                <div className="flex w-full translate-x-60">
-                  <ul className=" flex space-x-20" />
-                  <div>JANGJEON 컨테이너</div>
-                  <div>집찍고 컨테이너</div>
-                  <div>SNIPERFACTORY 컨테이너</div>
-                </div>
-              </div>
-              <StyleUnderLineText />
-            </div>
-          </div> */}
         </div>
       </section>
 
@@ -103,6 +91,8 @@ export default function Home() {
           </Button>
         </div>
       </section>
+
+      <VoucherMeritBG />
 
       <section className="w-full overflow-hidden rounded-md bg-black">
         <div className=" relative inset-0 flex h-screen w-full">

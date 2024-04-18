@@ -36,6 +36,27 @@ export const serviceData = [
   },
 ];
 
+export const voucherMerit = [
+  {
+    number: 1,
+    merit: '높은 선정률',
+    description:
+      '지난 5년간의 사업 경험과 노하우를 가진 스팩스페이스 DATA바우처 팀과 협업을 통해 선정률이 높아집니다.',
+  },
+  {
+    number: 2,
+    merit: '기술력',
+    description:
+      'DATA 관련 특허, 템플릿 등을 보유한 스팩스페이스와 DATA바우처 지원사업을 함께하세요.',
+  },
+  {
+    number: 3,
+    merit: '솔루션',
+    description:
+      'AI 뉴스 수집 솔루션/번역 솔루션 저해상도 -> 고해상도 변환 솔루션 AI 초점 제거 솔루션(동영상, 사진)',
+  },
+];
+
 export const bannerBadge = [
   { link: `/company`, label: '기업스토리' },
   { link: `/company/history`, label: '연혁' },

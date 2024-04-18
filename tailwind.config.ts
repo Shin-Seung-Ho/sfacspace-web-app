@@ -22,6 +22,9 @@ const config = {
         sfacspace: 'url("/bottom-sfac-logo.svg")',
         mainlineimg1: 'url("/main-linebg.png")',
         mainlineimg2: 'url("/main-linebg2.png")',
+        meritimg1: 'url("/selectionrate-bg.png")',
+        meritimg2: 'url("/technology-bg.png")',
+        meritimg3: 'url("/solution-bg.png")',
       },
       colors: {
         border: 'hsl(var(--border))',
