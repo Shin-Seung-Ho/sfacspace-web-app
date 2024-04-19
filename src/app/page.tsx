@@ -1,5 +1,6 @@
 import { ArrowRight, ChevronsDown, Mouse } from 'lucide-react';
 // import Image from 'next/image';
+import Image from 'next/image';
 import {
   Carousel,
   CarouselContent,
@@ -16,6 +17,7 @@ import { SparklesCore } from '@/components/ui/sparkles';
 import ParentComponent from './(page)/components/container-slider';
 import VoucherMeritBG from './(page)/components/voucher-merit-bg';
 import NeonRing from './(page)/components/ring/ring';
+import SolutionCard from './(page)/components/solution-card';
 
 export default function Home() {
   return (
@@ -76,47 +78,38 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full overflow-hidden rounded-md bg-black">
-        <div className=" relative inset-0 flex h-screen w-full">
-          <SparklesCore
-            id="tsparticlesfullpage"
-            background="transparent"
-            minSize={0.6}
-            maxSize={1.4}
-            particleDensity={100}
-            className="relative h-full w-full"
-            particleColor="#FFFFFF"
+      <section className="relative w-full overflow-hidden rounded-md bg-black">
+        <div className="relative flex h-[700px] items-center justify-center">
+          <Image
+            src="/history/history-bg.png"
+            width={1000}
+            height={0}
+            style={{ width: '100%', height: '100%' }}
+            objectFit="cover"
+            alt="spacebg"
           />
-          <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transform">
+          <div className=" absolute mx-auto flex w-full max-w-7xl justify-between">
             <MotionDiv
               whileInView={{ y: 0, opacity: 1 }}
               initial={{ y: 30, opacity: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
               className="flex flex-col items-center"
             >
-              <SectionTitle title="Solution" textWhite textCenter />
-              <div className="flex gap-8 text-BM24 text-white">
-                <p>Vision</p>
-                <p>NLP</p>
-              </div>
+              <SectionTitle
+                title={`계속되는 도전,
+              혁신을 향한
+              노력의 흔적`}
+                textWhite
+                descripstion="꿈꾸던 것을 현실로, 바래왔던것을 이루게 합니다."
+              />
             </MotionDiv>
             <MotionDiv
               whileInView={{ y: 0, opacity: 1 }}
               initial={{ y: 30, opacity: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="flex flex-col gap-12"
+              className="w-1/2"
             >
-              <div className="flex flex-col gap-5 text-center text-white">
-                <p className=" text-HB80">Computer Vision</p>
-                <p className="text-BM20">
-                  인공지능을 통해 이미지와 비디오에서 오브젝트를 인식하고
-                  변형하는 솔루션
-                </p>
-              </div>
-              <Button className="mx-auto flex items-center gap-2 rounded-full bg-[#47BFEF] text-BB20">
-                <p>자세히 보러가기</p>
-                <ArrowRight />
-              </Button>
+              <SolutionCard />
             </MotionDiv>
           </div>
         </div>
@@ -159,6 +152,9 @@ export default function Home() {
               title="Issue"
               descripstion="새로운 스팩스페이스 소식을 확인해보세요."
             />
+            <Button className="bg-[#EDEDED] text-[#131313] hover:bg-gray-500">
+              뉴스룸 바로가기
+            </Button>
           </MotionDiv>
           <Carousel
             opts={{
