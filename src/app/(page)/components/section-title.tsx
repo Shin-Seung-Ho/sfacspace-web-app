@@ -17,7 +17,7 @@ export default function SectionTitle({
     <div className={`flex flex-col ${textCenter === true && 'text-center'}`}>
       <p className=" font-preMedium text-BM24 text-[#47BFEF]">SFACSPACE</p>
       <h3
-        className={` text-black ${textWhite === true && 'text-white'} ${titlefont ? 'text-HB80 font-extrabold' : 'font-preSemiBold text-HB60'}`}
+        className={` whitespace-pre-line break-keep text-black ${textWhite === true && 'text-white'} ${titlefont ? 'text-HB80 font-extrabold' : 'font-preSemiBold text-HB60'}`}
       >
         {title}
       </h3>
