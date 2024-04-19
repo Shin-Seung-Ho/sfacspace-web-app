@@ -1,5 +1,6 @@
 interface SectionTitleProps {
   title: string;
+  titlefont?: boolean;
   descripstion?: string;
   textCenter?: boolean;
   textWhite?: boolean;
@@ -8,6 +9,7 @@ interface SectionTitleProps {
 export default function SectionTitle({
   title,
   descripstion,
+  titlefont,
   textCenter,
   textWhite,
 }: SectionTitleProps) {
@@ -15,7 +17,7 @@ export default function SectionTitle({
     <div className={`flex flex-col ${textCenter === true && 'text-center'}`}>
       <p className=" font-preMedium text-BM24 text-[#47BFEF]">SFACSPACE</p>
       <h3
-        className={`font-preSemiBold text-HB60 text-black ${textWhite === true && 'text-white'}`}
+        className={` text-black ${textWhite === true && 'text-white'} ${titlefont ? 'text-HB80 font-extrabold' : 'font-preSemiBold text-HB60'}`}
       >
         {title}
       </h3>
