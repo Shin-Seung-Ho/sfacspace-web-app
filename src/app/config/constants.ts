@@ -37,22 +37,22 @@ export const serviceData = [
 ];
 
 export const voucherlogo = [
-  { voucherlogo: '/voucherlogo/voucher/logo1.svg' },
-  { voucherlogo: '/voucherlogo/voucher/logo2.svg' },
-  { voucherlogo: '/voucherlogo/voucher/logo3.svg' },
-  { voucherlogo: '/voucherlogo/voucher/logo4.svg' },
-  { voucherlogo: '/voucherlogo/voucher/logo5.svg' },
-  { voucherlogo: '/voucherlogo/voucher/logo6.svg' },
-  { voucherlogo: '/voucherlogo/voucher/logo7.svg' },
-  { voucherlogo: '/voucherlogo/voucher/logo8.svg' },
-  { voucherlogo: '/voucherlogo/voucher/logo9.svg' },
-  { voucherlogo: '/voucherlogo/voucher/logo10.svg' },
-  { voucherlogo: '/voucherlogo/voucher/logo11.svg' },
-  { voucherlogo: '/voucherlogo/voucher/logo12.svg' },
-  { voucherlogo: '/voucherlogo/voucher/logo13.svg' },
-  { voucherlogo: '/voucherlogo/voucher/logo14.svg' },
-  { voucherlogo: '/voucherlogo/voucher/logo15.svg' },
-  { voucherlogo: '/voucherlogo/voucher/logo16.svg' },
+  { voucherlogo: '/voucherlogo/voucher-logo1.svg' },
+  { voucherlogo: '/voucherlogo/voucher-logo2.svg' },
+  { voucherlogo: '/voucherlogo/voucher-logo3.svg' },
+  { voucherlogo: '/voucherlogo/voucher-logo4.svg' },
+  { voucherlogo: '/voucherlogo/voucher-logo5.svg' },
+  { voucherlogo: '/voucherlogo/voucher-logo6.svg' },
+  { voucherlogo: '/voucherlogo/voucher-logo7.svg' },
+  { voucherlogo: '/voucherlogo/voucher-logo8.svg' },
+  { voucherlogo: '/voucherlogo/voucher-logo9.svg' },
+  { voucherlogo: '/voucherlogo/voucher-logo10.svg' },
+  { voucherlogo: '/voucherlogo/voucher-logo11.svg' },
+  { voucherlogo: '/voucherlogo/voucher-logo12.svg' },
+  { voucherlogo: '/voucherlogo/voucher-logo13.svg' },
+  { voucherlogo: '/voucherlogo/voucher-logo14.svg' },
+  { voucherlogo: '/voucherlogo/voucher-logo15.svg' },
+  { voucherlogo: '/voucherlogo/voucher-logo16.svg' },
 ];
 
 export const voucherMerit = [
