@@ -1,7 +1,6 @@
-/* eslint-disable react/no-array-index-key */
-
 'use client';
 
+/* eslint-disable react/no-array-index-key */
 import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -13,9 +12,7 @@ export function InfiniteMovingCards({
   className,
 }: {
   items: {
-    quote: string;
-    name: string;
-    title: string;
+    voucherlogo: string;
   }[];
   direction?: 'left' | 'right';
   speed?: 'fast' | 'normal' | 'slow';
@@ -75,21 +72,21 @@ export function InfiniteMovingCards({
     <div
       ref={containerRef}
       className={cn(
-        'scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
+        'scroller relative z-20 w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
         className,
       )}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          ' flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4',
+          ' flex w-max min-w-full shrink-0 gap-4 py-4',
           start && 'animate-scroll ',
           pauseOnHover && 'hover:[animation-play-state:paused]',
         )}
       >
         {items.map((item, idx) => (
           <li
-            className="relative w-[350px] max-w-full flex-shrink-0 rounded-2xl border border-b-0 border-slate-700 px-8 py-6 md:w-[450px]"
+            className="relative max-w-full px-4 py-6"
             style={{
               background:
                 'linear-gradient(180deg, var(--slate-800), var(--slate-900)',
@@ -101,18 +98,8 @@ export function InfiniteMovingCards({
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               />
-              <span className=" relative z-20 text-sm font-normal leading-[1.6] text-gray-100">
-                {item.quote}
-              </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex flex-col gap-1">
-                  <span className=" text-sm font-normal leading-[1.6] text-gray-400">
-                    {item.name}
-                  </span>
-                  <span className=" text-sm font-normal leading-[1.6] text-gray-400">
-                    {item.title}
-                  </span>
-                </span>
+                <img src={item.voucherlogo} alt="Logo" /> {/* 로고 표시 */}
               </div>
             </blockquote>
           </li>

@@ -145,50 +145,62 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="flex flex-col gap-14 py-24">
-        <div className="ml-auto flex w-4/5 flex-col text-HB48">
-          <p>우리는 도전을 두려워하지 않습니다</p>
+      <section className=" relative flex flex-col justify-center gap-14">
+        <div className="relative h-[1200px]">
+          <Image
+            src="/history/history-bg2.png"
+            width={1000}
+            height={0}
+            style={{ width: '100%', height: '100%' }}
+            objectFit="cover"
+            alt="spacebg"
+          />
+        </div>
+        <div className="absolute flex flex-col gap-14 ">
+          <div className="ml-auto flex w-4/5 flex-col text-HB48 text-white">
+            <p>우리는 도전을 두려워하지 않습니다</p>
+            <div className="flex items-center">
+              <p>우리는 다양한 가능성을 봅니다</p>
+              <div className="h-1 flex-grow bg-[#EEF7FB]" />
+            </div>
+          </div>
           <div className="flex items-center">
-            <p>우리는 다양한 가능성을 봅니다</p>
-            <div className="h-1 flex-grow bg-[#EEF7FB]" />
+            <div className=" h-1 w-1/5 border border-[#EEF7FB] bg-[#EEF7FB]" />
+            <div className=" flex w-full items-center gap-20 rounded-l-3xl bg-[#EEF7FB] px-20 py-20">
+              <Image
+                src="/company/company-etc1.svg"
+                width={130}
+                height={130}
+                alt="etc1"
+              />
+              <Image
+                src="/company/company-etc2.svg"
+                width={130}
+                height={130}
+                alt="etc2"
+              />
+              <p className="w-1/2 whitespace-pre-line break-keep px-24 text-BM20">
+                스팩스페이스는 인공지능을 통해 신제품 개발, 이미지 처리, 데이터
+                처리/가공 등 다양한 서비스를 제공하고, 더 나아가 고객들에게
+                필요한 SaaS 솔루션을 제공합니다.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="flex items-center">
-          <div className=" h-1 w-1/5 border border-[#EEF7FB] bg-[#EEF7FB]" />
-          <div className=" flex w-full items-center gap-20 rounded-l-3xl bg-[#EEF7FB] px-20 py-20">
-            <Image
-              src="/company/company-etc1.svg"
-              width={130}
-              height={130}
-              alt="etc1"
-            />
-            <Image
-              src="/company/company-etc2.svg"
-              width={130}
-              height={130}
-              alt="etc2"
-            />
-            <p className="w-1/2 whitespace-pre-line break-keep px-24 text-BM20">
-              스팩스페이스는 인공지능을 통해 신제품 개발, 이미지 처리, 데이터
-              처리/가공 등 다양한 서비스를 제공하고, 더 나아가 고객들에게 필요한
-              SaaS 솔루션을 제공합니다.
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center">
-          <div className=" h-1 w-3/5 border border-[#EEF7FB] bg-[#EEF7FB]" />
-          <div className=" flex w-full items-center gap-20 rounded-l-3xl bg-[#EEF7FB] px-20 py-20">
-            <Image
-              src="/company/company-etc3.svg"
-              width={130}
-              height={130}
-              alt="etc3"
-            />
-            <p className=" whitespace-pre-line break-keep px-24 text-BM20">
-              스팩스페이스는 앞선 인공지능 기술을 통해 사회의 구성원 모두가
-              빅데이터를 보다 쉽고 편하게 활용할 수 있도록 하고 이를 바탕으로
-              사회 혁신을 선도해 나가고자 합니다.
-            </p>
+          <div className="flex items-center">
+            <div className=" h-1 w-3/5 border border-[#EEF7FB] bg-[#EEF7FB]" />
+            <div className=" flex w-full items-center gap-20 rounded-l-3xl bg-[#EEF7FB] px-20 py-20">
+              <Image
+                src="/company/company-etc3.svg"
+                width={130}
+                height={130}
+                alt="etc3"
+              />
+              <p className=" whitespace-pre-line break-keep px-24 text-BM20">
+                스팩스페이스는 앞선 인공지능 기술을 통해 사회의 구성원 모두가
+                빅데이터를 보다 쉽고 편하게 활용할 수 있도록 하고 이를 바탕으로
+                사회 혁신을 선도해 나가고자 합니다.
+              </p>
+            </div>
           </div>
         </div>
       </section>

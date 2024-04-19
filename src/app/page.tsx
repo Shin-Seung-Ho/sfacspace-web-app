@@ -8,7 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { pracImg } from './config/constants';
+import { pracImg, voucherlogo } from './config/constants';
 import MotionDiv from '@/components/common/motion-div';
 import SectionTitle from './(page)/components/section-title';
 import { Button } from '@/components/ui/button';
@@ -18,6 +18,7 @@ import ParentComponent from './(page)/components/container-slider';
 import VoucherMeritBG from './(page)/components/voucher-merit-bg';
 import NeonRing from './(page)/components/ring/ring';
 import SolutionCard from './(page)/components/solution-card';
+import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
 
 export default function Home() {
   return (
@@ -134,6 +135,13 @@ export default function Home() {
             <p>자세히 보러가기</p>
             <ArrowRight color="#131313" />
           </Button>
+          <div className="dark:bg-grid-white/[0.05] relative flex flex-col overflow-hidden rounded-md bg-white antialiased dark:bg-black">
+            <InfiniteMovingCards
+              items={voucherlogo}
+              direction="right"
+              speed="slow"
+            />
+          </div>
         </div>
       </section>
 
