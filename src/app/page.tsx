@@ -8,7 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { pracImg, voucherlogo } from './config/constants';
+import { pracImg, voucherlogo1, voucherlogo2 } from './config/constants';
 import MotionDiv from '@/components/common/motion-div';
 import SectionTitle from './(page)/components/section-title';
 import { Button } from '@/components/ui/button';
@@ -35,7 +35,7 @@ export default function Home() {
         />
         <MotionDiv
           whileInView={{ y: 0, opacity: 1 }}
-          initial={{ y: -300, opacity: 0 }}
+          initial={{ y: -100, opacity: 0 }}
           transition={{ duration: 1, delay: 0 }}
           className=" absolute -translate-y-1/2"
         >
@@ -117,7 +117,7 @@ export default function Home() {
       </section>
 
       <section className="max-h-screen w-full bg-white">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-10">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-10 py-28">
           <MotionDiv
             whileInView={{ y: 0, opacity: 1 }}
             initial={{ y: 30, opacity: 0 }}
@@ -137,9 +137,16 @@ export default function Home() {
           </Button>
           <div className="dark:bg-grid-white/[0.05] relative flex flex-col overflow-hidden rounded-md bg-white antialiased dark:bg-black">
             <InfiniteMovingCards
-              items={voucherlogo}
+              items={voucherlogo1}
+              direction="left"
+              speed="normal"
+            />
+          </div>
+          <div className="dark:bg-grid-white/[0.05] relative flex flex-col overflow-hidden rounded-md bg-white antialiased dark:bg-black">
+            <InfiniteMovingCards
+              items={voucherlogo2}
               direction="right"
-              speed="slow"
+              speed="normal"
             />
           </div>
         </div>

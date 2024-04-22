@@ -86,7 +86,7 @@ export function InfiniteMovingCards({
       >
         {items.map((item, idx) => (
           <li
-            className="relative max-w-full px-4 py-6"
+            className="relative max-w-full px-4"
             style={{
               background:
                 'linear-gradient(180deg, var(--slate-800), var(--slate-900)',
@@ -98,7 +98,7 @@ export function InfiniteMovingCards({
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               />
-              <div className="relative z-20 mt-6 flex flex-row items-center">
+              <div className="relative z-20 flex flex-row items-center opacity-50">
                 <img src={item.voucherlogo} alt="Logo" /> {/* 로고 표시 */}
               </div>
             </blockquote>
