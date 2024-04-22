@@ -11,7 +11,7 @@ export const servicesSubMenu = [
 ];
 
 export const vouchersSubMenu = [
-  { link: '/vouchers/data', label: '데이터바우처' },
+  { link: '/vouchers', label: '데이터바우처' },
   { link: '/vouchers/industrial', label: '산업맞춤형 혁신바우처' },
   { link: '/vouchers/ai', label: 'AI 바우처' },
   { link: '/vouchers/innovation', label: '혁신바우처' },
@@ -36,7 +36,7 @@ export const serviceData = [
   },
 ];
 
-export const voucherlogo = [
+export const voucherlogo1 = [
   { voucherlogo: '/voucherlogo/voucher-logo1.svg' },
   { voucherlogo: '/voucherlogo/voucher-logo2.svg' },
   { voucherlogo: '/voucherlogo/voucher-logo3.svg' },
@@ -45,6 +45,9 @@ export const voucherlogo = [
   { voucherlogo: '/voucherlogo/voucher-logo6.svg' },
   { voucherlogo: '/voucherlogo/voucher-logo7.svg' },
   { voucherlogo: '/voucherlogo/voucher-logo8.svg' },
+];
+
+export const voucherlogo2 = [
   { voucherlogo: '/voucherlogo/voucher-logo9.svg' },
   { voucherlogo: '/voucherlogo/voucher-logo10.svg' },
   { voucherlogo: '/voucherlogo/voucher-logo11.svg' },
@@ -53,6 +56,105 @@ export const voucherlogo = [
   { voucherlogo: '/voucherlogo/voucher-logo14.svg' },
   { voucherlogo: '/voucherlogo/voucher-logo15.svg' },
   { voucherlogo: '/voucherlogo/voucher-logo16.svg' },
+];
+
+export const voucherBusiness = [
+  {
+    voucherlogo: '/voucherlogo/voucher-logo1.svg',
+    name: '(주)콜론 30',
+    description:
+      'NFT 보증서를 기반으로 리세일 수익을 작가와 컬렉터에게 돌려주는 실물 미술품 거래 플랫폼',
+  },
+  {
+    voucherlogo: '/voucherlogo/voucher-logo2.svg',
+    name: '(주)와플러스',
+    description:
+      '인플루언서 커스텀 매칭 큐레이션 서비스 제공을 위한 Bespoke Interaction Marketing 서비스 플랫폼 고도화',
+  },
+  {
+    voucherlogo: '/voucherlogo/voucher-logo3.svg',
+    name: '(주)니그나스',
+    description:
+      '인공지능을 통해 데이터 3D데이터를 맞춤형 의류 제작용 2D도면 변환 시스템',
+  },
+  {
+    voucherlogo: '/voucherlogo/voucher-logo4.svg',
+    name: '(주)넥스트메타',
+    description:
+      '모바일 최적화 액티브 학습 컨텐츠 제작 솔루션(SaaS) 및 학습 앱',
+  },
+  {
+    voucherlogo: '/voucherlogo/voucher-logo5.svg',
+    name: '아티키즈',
+    description: '아이들의 그림을 활용해 심리 발달 상태를 분석하는 시스템 개발',
+  },
+  {
+    voucherlogo: '/voucherlogo/voucher-logo6.svg',
+    name: '파이헬스케어(Pie Healthcare)',
+    description:
+      '대량의 한식 식단 사진 데이터와 다이어트 텍스트 데이터를 통해 한국인 맞춤형 정밀 AI 음식 검출 및 영양 분석기 개발',
+  },
+  {
+    voucherlogo: '/voucherlogo/voucher-logo7.svg',
+    name: '볼드코퍼레이션(Bold Coporation)',
+    description:
+      '컨택센터 산업구조 혁신을 위한 AI Assistant가 포함된 AI CCaaS 고도화',
+  },
+  {
+    voucherlogo: '/voucherlogo/voucher-logo10.svg',
+    name: '플리더스',
+    description:
+      '유저 설문조사(피드백) 데이터 분석을 통한 장르별, 소재별 개인 맞춤형 게임 추천 시스템 개발',
+  },
+  {
+    voucherlogo: '/voucherlogo/voucher-logo12.svg',
+    name: '랭글',
+    description: '트랜스포머 모델을 활용한 AI 한국어 선생님',
+  },
+  {
+    voucherlogo: '/voucherlogo/voucher-logo13.svg',
+    name: '(주)사이다경제',
+    description:
+      '챗봇 기능 고도화 및 사용자 상태 추정 가능 AI 모델 구축 프로젝트',
+  },
+  {
+    voucherlogo: '/voucherlogo/voucher-logo14.svg',
+    name: '(주)메이킷올',
+    description:
+      '챗봇 기능 고도화 및 사용자 상태 추정 가능 AI 모델 구축 프로젝트',
+  },
+  {
+    voucherlogo: '/voucherlogo/voucher-logo15.svg',
+    name: '도구모음',
+    description:
+      'VGG 구조의 CNN 기반 네트워크를 통해 중고 노트북의 외부 결함을 카테고리화 및 인식하여 훼손상태를 통한 가격측정 인공지능 모델 개발 프로젝트',
+  },
+  {
+    voucherlogo: '/voucherlogo/voucher-logo16.svg',
+    name: '세이프홈즈(테라파이)',
+    description: 'STT/TTS 기술 기반 컨택센터 AI Assistant 모델 개발 프로젝트',
+  },
+];
+
+export const voucherMerit2 = [
+  {
+    src: `/voucher/ping1.svg`,
+    merit: '높은 선정률',
+    description:
+      '지난 5년간의 사업 경험과 노하우를 가진 스팩스페이스 DATA바우처 팀과 협업을 통해 선정률이 높아집니다.',
+  },
+  {
+    src: `/voucher/ping2.svg`,
+    merit: '기술력',
+    description:
+      'DATA 관련 특허, 템플릿 등을 보유한 스팩스페이스와 DATA바우처 지원사업을 함께하세요.',
+  },
+  {
+    src: `/voucher/ping3.svg`,
+    merit: '솔루션',
+    description:
+      'AI 뉴스 수집 솔루션/번역 솔루션 저해상도 -> 고해상도 변환 솔루션 AI 초점 제거 솔루션(동영상, 사진)',
+  },
 ];
 
 export const voucherMerit = [
