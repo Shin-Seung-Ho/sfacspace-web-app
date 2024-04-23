@@ -18,7 +18,7 @@ export default function BannerVideoCard({
   description,
 }: BannerVideoCardProps) {
   return (
-    <section className=" mx-auto min-h-screen max-w-[1360px]">
+    <section className=" mx-auto max-w-[1360px]">
       <div className="relative flex justify-center py-10">
         <video autoPlay loop muted className="rounded-[40px]">
           <source src={src} />

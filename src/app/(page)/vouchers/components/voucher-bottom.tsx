@@ -7,7 +7,7 @@ export default function VoucherBottom() {
   return (
     <section className=" w-full">
       <div className="relative flex justify-center">
-        <video autoPlay loop muted>
+        <video autoPlay loop muted className="w-full">
           <source src="/voucher/voucher-bottom-video.mp4" />
         </video>
         <div className="absolute inset-0 bg-black opacity-70" />

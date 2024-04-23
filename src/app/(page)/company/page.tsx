@@ -156,10 +156,10 @@ export default function Page() {
             alt="spacebg"
           />
         </div>
-        <div className="absolute flex flex-col gap-14 ">
+        <div className="absolute flex w-full flex-col gap-14 ">
           <div className="ml-auto flex w-4/5 flex-col text-HB48 text-white">
             <p>우리는 도전을 두려워하지 않습니다</p>
-            <div className="flex items-center">
+            <div className="flex items-center gap-20">
               <p>우리는 다양한 가능성을 봅니다</p>
               <div className="h-1 flex-grow bg-[#EEF7FB]" />
             </div>
