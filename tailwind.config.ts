@@ -165,6 +165,30 @@ const config = {
             lineHeight: '140%',
           },
         ],
+        HB32: [
+          '32px',
+          {
+            fontWeight: 600,
+            letterSpacing: '-0.03em',
+            lineHeight: '140%',
+          },
+        ],
+        HM32: [
+          '32px',
+          {
+            fontWeight: 500,
+            letterSpacing: '-0.03em',
+            lineHeight: '140%',
+          },
+        ],
+        HR32: [
+          '32px',
+          {
+            fontWeight: 400,
+            letterSpacing: '-0.03em',
+            lineHeight: '140%',
+          },
+        ],
         HB28: [
           '28px',
           {
