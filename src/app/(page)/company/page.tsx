@@ -132,7 +132,7 @@ export default function Page() {
             <ItemCard
               bgcolor="bg-[#8CC1FF]"
               bgimg="/company/company-sniperfactory-symbol.svg"
-              bgimgWidth={350}
+              bgimgWidth={300}
               itemimg="/company/company-sniperfactory.png"
               itemimgWidth={500}
               itemName="스나이퍼팩토리"
