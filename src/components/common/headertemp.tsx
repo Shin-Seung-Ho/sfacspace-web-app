@@ -14,7 +14,7 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { Button } from '../ui/button';
 
-const links = [
+export const links = [
   {
     href: '/company',
     label: '기업정보',
@@ -58,6 +58,7 @@ export default function NavBar() {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
   const [activeSubLabel, setActiveSubLabel] = useState<string | null>(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     setCurrent(latest);
@@ -77,14 +78,17 @@ export default function NavBar() {
     <header
       className={cn(
         'z-50 w-full duration-500',
-        pathname === '/' ? 'fixed' : 'sticky',
+        pathname === '/company' ? 'sticky' : 'fixed',
         current < 8 ? 'top-0' : 'top-0',
+        isHovered ? 'bg-white' : '',
       )}
     >
       <nav
         className={cn(
           'container flex items-center gap-8 py-2 duration-500',
-          pathname === '/' && current <= deviceHeight ? 'text-white' : '',
+          pathname !== '/company' && current <= deviceHeight
+            ? 'text-white'
+            : '',
         )}
       >
         <Link href="/">
@@ -105,20 +109,25 @@ export default function NavBar() {
           {links.map(({ href, label, subMenuItems }, index) => (
             <li
               key={`${href}${label}`}
-              className="group relative w-full"
+              className="relative w-full"
               onMouseEnter={() => handleMenuEnter(index)}
               onMouseLeave={handleMenuLeave}
             >
               <Link
                 href={href}
                 target={href.startsWith('http') ? '_blank' : ''}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
               >
-                <Button variant="custom" className="w-full">
+                <Button
+                  variant="custom"
+                  className={` w-full ${isHovered && current <= deviceHeight ? 'text-black' : ''}`}
+                >
                   {label}
                 </Button>
               </Link>
               {activeMenu === index && (
-                <div className="absolute left-0 top-full flex w-full flex-col items-center gap-4 py-5 shadow-md">
+                <div className="absolute left-0 top-full flex w-full flex-col items-center gap-4 py-5 shadow-md group-hover:visible">
                   {subMenuItems?.map(({ href: subHref, label: subLabel }) => (
                     <Link
                       key={`${subHref}${subLabel}`}
@@ -140,14 +149,28 @@ export default function NavBar() {
           ))}
         </ul>
         <div className="ml-auto hidden md:flex">
-          <Link href="https://tally.so/r/mVQq5g">
-            <Button variant="custom" className="font-bold tracking-tighter">
+          <Link
+            href="https://tally.so/r/mVQq5g"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <Button
+              variant="custom"
+              className={` w-full ${isHovered ? 'font-bold tracking-tighter text-black' : ''}`}
+            >
               문의
             </Button>
           </Link>
-          <Link href="/map">
-            <Button variant="custom" className="font-bold tracking-tighter">
-              오시는 길
+          <Link
+            href="/map"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <Button
+              variant="custom"
+              className={` w-full ${isHovered ? 'font-bold tracking-tighter text-black' : ''}`}
+            >
+              오시는길
             </Button>
           </Link>
         </div>

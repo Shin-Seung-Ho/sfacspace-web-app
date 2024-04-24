@@ -22,7 +22,7 @@ export default function SectionTitle({
         {title}
       </h3>
       <h6
-        className={`whitespace-pre-line font-preMedium text-BM20 ${textWhite === true && 'text-white'}`}
+        className={`whitespace-pre-line text-[20px] font-normal ${textWhite === true && 'text-white'}`}
       >
         {descripstion}
       </h6>

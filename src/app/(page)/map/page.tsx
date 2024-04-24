@@ -3,9 +3,9 @@ import React from 'react';
 
 export default function CompanyMap() {
   return (
-    <main className="bg-black">
+    <main className="bg-black py-20">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-2 text-white">
-        <p className=" text-HB32 py-12">오시는길</p>
+        <p className=" py-12 text-[32px] font-bold">오시는길</p>
         <div className="h-px w-full bg-gradient-to-r from-white via-[#73B8F7] to-white opacity-70" />
         <p className=" py-8 text-BR20">
           서울특별시 강서구 마곡중앙2로 11 305호

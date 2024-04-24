@@ -42,7 +42,7 @@ export default function ParentComponent() {
                         <br />
                         국내 최초 실시간 해외뉴스 서비스
                       </p>
-                      <Button className="flex gap-3 bg-white hover:bg-gray-300">
+                      <Button className="flex items-center gap-3 rounded-full bg-white py-8 hover:bg-gray-300">
                         <Image
                           src="/main-jangjeon-logo.svg"
                           width={210}
@@ -76,7 +76,7 @@ export default function ParentComponent() {
                         <br />
                         공인중개사의 필수 매물 사진첩
                       </p>
-                      <Button className="flex gap-3 bg-white hover:bg-gray-300">
+                      <Button className="flex items-center gap-3 rounded-full bg-white py-8 hover:bg-gray-300">
                         <Image
                           src="/main-jjiggo-logo.svg"
                           width={130}
@@ -103,7 +103,7 @@ export default function ParentComponent() {
                         Snipe your dream
                         <br /> 너의 스펙이 되어줄게
                       </p>
-                      <Button className="flex gap-3 bg-white hover:bg-gray-300">
+                      <Button className="flex items-center gap-3 rounded-full bg-white py-8 hover:bg-gray-300">
                         <Image
                           src="/main-sniperfactory-logo.svg"
                           width={210}
