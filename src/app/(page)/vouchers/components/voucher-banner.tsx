@@ -16,7 +16,7 @@ export default function VoucherBanner({
   return (
     <section className="min-h-screen w-full">
       <div className="relative flex justify-center">
-        <video autoPlay loop muted>
+        <video autoPlay loop muted className="w-full">
           <source src={src} />
         </video>
         <MotionDiv

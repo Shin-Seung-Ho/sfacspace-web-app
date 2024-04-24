@@ -24,7 +24,7 @@ export default function StyleUnderLineText({
   };
 
   return (
-    <div className="relative flex justify-between font-bold">
+    <div className="relative flex justify-center gap-20 py-12 font-bold">
       {service.map((text, idx) => (
         <div key={idx} className="relative cursor-pointer">
           <div

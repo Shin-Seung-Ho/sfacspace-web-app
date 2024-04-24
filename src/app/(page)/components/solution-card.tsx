@@ -30,7 +30,7 @@ export default function SolutionCard() {
         <div className="relative cursor-pointer">
           <p
             role="presentation"
-            className="relative z-50 text-BB20 font-bold"
+            className="relative z-50 text-BB20 font-normal"
             onClick={() => setSelectedCard('NLP')}
           >
             NLP
@@ -49,7 +49,7 @@ export default function SolutionCard() {
           className="h-full w-3/4"
         >
           <Card className="h-full p-10">
-            <CardTitle className=" text-HB48">ComPuter Vision</CardTitle>
+            <CardTitle className=" text-HB48">Computer Vision</CardTitle>
             <CardContent className=" w-3/4 whitespace-pre-line break-keep py-5 text-BR20">
               인공지능을 통해 이미지와 비디오에서 오브젝트를 인식하고 변형하는
               솔루션
