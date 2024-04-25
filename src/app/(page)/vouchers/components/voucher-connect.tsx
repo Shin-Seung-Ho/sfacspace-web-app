@@ -16,7 +16,7 @@ export default function VoucherConnect({
   imgwidth,
 }: VoucherConnectProps) {
   return (
-    <section className=" mx-auto flex max-w-7xl flex-col items-center py-52">
+    <section className=" mx-auto flex max-w-7xl flex-col items-center py-24">
       <div className=" mx-auto w-3/4 whitespace-pre-line break-keep text-center">
         <HighlightWord text={text} highlightWords={highlightWords} />
       </div>
