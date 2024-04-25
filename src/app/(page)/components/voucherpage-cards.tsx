@@ -44,7 +44,7 @@ export default function VoucherCards() {
       {voucher.map((item, index) => (
         <div
           key={index}
-          className={`col-span-${index === 3 || index === 4 ? '3' : '2'} h-60 rounded-[20px] bg-cover`}
+          className={`col-span-2 ${index === 3 && 'col-span-3'} ${index === 4 && 'col-span-3'} h-60 rounded-[20px] bg-cover`}
           style={{ backgroundImage: `url(${item.bg})` }}
         >
           <Link href={item.href}>
