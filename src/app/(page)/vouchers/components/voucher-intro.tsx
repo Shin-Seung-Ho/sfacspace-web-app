@@ -12,7 +12,7 @@ export default function VoucherIntro({
   src,
 }: VoucherIntroProps) {
   return (
-    <div className="mx-auto flex max-w-7xl flex-col items-center gap-20 py-56">
+    <div className="mx-auto flex max-w-7xl flex-col items-center gap-20 py-32">
       <div className=" flex items-center justify-between">
         <p className=" text-HB60 font-extrabold">
           {voucher}는 <br /> 무엇일까요?

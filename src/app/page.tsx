@@ -1,24 +1,18 @@
-import { ArrowRight, ChevronsDown, Mouse } from 'lucide-react';
+import { ArrowUpRight, ChevronsDown, Mouse } from 'lucide-react';
 // import Image from 'next/image';
 import Image from 'next/image';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
-import { pracImg, voucherlogo1, voucherlogo2 } from './config/constants';
+import { voucherlogo1, voucherlogo2 } from './config/constants';
 import MotionDiv from '@/components/common/motion-div';
 import SectionTitle from './(page)/components/section-title';
 import { Button } from '@/components/ui/button';
-import MainNewsCard from './(page)/components/news-card';
 import { SparklesCore } from '@/components/ui/sparkles';
 import ParentComponent from './(page)/components/container-slider';
 import VoucherMeritBG from './(page)/components/voucher-merit-bg';
 import NeonRing from './(page)/components/ring/ring';
 import SolutionCard from './(page)/components/solution-card';
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
+import VoucherCards from './(page)/components/voucherpage-cards';
+import MainNewsCard from './(page)/components/news-card';
 
 export default function Home() {
   return (
@@ -50,7 +44,7 @@ export default function Home() {
           <h1 className=" text-center text-HB48 text-white">
             {' '}
             기업 향상을 위한 <br /> 독자적인 솔루션 <br /> 오직{' '}
-            <span className="text-[#47BFEF]">SFACSPACE</span>에서
+            <span className="text-[#47BFEF]">SFACSPACE </span>에서
           </h1>
         </MotionDiv>
         <div className="absolute bottom-0 flex animate-bounce flex-col items-center pb-16">
@@ -64,7 +58,7 @@ export default function Home() {
           <MotionDiv
             whileInView={{ y: 0, opacity: 1 }}
             initial={{ y: 30, opacity: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 1, delay: 0.1 }}
             className="flex flex-col items-center justify-center"
           >
             <div className="relative flex items-center">
@@ -93,7 +87,7 @@ export default function Home() {
             <MotionDiv
               whileInView={{ y: 0, opacity: 1 }}
               initial={{ y: 30, opacity: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
+              transition={{ duration: 1, delay: 0.1 }}
               className="flex flex-col items-center"
             >
               <SectionTitle
@@ -107,7 +101,7 @@ export default function Home() {
             <MotionDiv
               whileInView={{ y: 0, opacity: 1 }}
               initial={{ y: 30, opacity: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
+              transition={{ duration: 1, delay: 0.1 }}
               className="w-1/2"
             >
               <SolutionCard />
@@ -116,85 +110,77 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-h-screen w-full bg-white">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-10 py-28">
+      <section className="min-h-screen w-full bg-white py-28">
+        <div className=" mx-auto flex max-w-7xl flex-col">
           <MotionDiv
             whileInView={{ y: 0, opacity: 1 }}
             initial={{ y: 30, opacity: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 1, delay: 0.1 }}
           >
-            <SectionTitle
-              title="Voucher"
-              titlefont
-              textCenter
-              descripstion={`6,000만원 규모 AI 가공 솔루션 지원 사업을
-              스팩스페이스에서 무료로 이용해보세요!`}
-            />
+            <div className="flex flex-col">
+              <p className=" font-preMedium text-BM24 text-[#47BFEF]">
+                Voucher
+              </p>
+              <h3
+                className={` whitespace-pre-line break-keep text-HB48 font-bold text-black`}
+              >
+                6,000만원 규모
+                <br /> AI 가공 솔루션 지원 사업을
+                <br /> 스팩스페이스에서 무료로 이용해보세요!
+              </h3>
+            </div>
           </MotionDiv>
-          <Button className="flex items-center gap-2 rounded-full bg-[#73B8F7] py-5 text-BM20 text-[#131313]">
-            <p>자세히 보러가기</p>
-            <ArrowRight color="#131313" />
-          </Button>
-          <div className="dark:bg-grid-white/[0.05] relative flex flex-col overflow-hidden rounded-md bg-white antialiased dark:bg-black">
-            <InfiniteMovingCards
-              items={voucherlogo1}
-              direction="left"
-              speed="normal"
-            />
-          </div>
-          <div className="dark:bg-grid-white/[0.05] relative flex flex-col overflow-hidden rounded-md bg-white antialiased dark:bg-black">
-            <InfiniteMovingCards
-              items={voucherlogo2}
-              direction="right"
-              speed="normal"
-            />
-          </div>
+          <VoucherCards />
+        </div>
+        {/* 호버 할때 배경변경되는 섹션 */}
+        <VoucherMeritBG />
+        <div className="dark:bg-grid-white/[0.05] relative flex flex-col overflow-hidden rounded-md bg-white py-4 antialiased dark:bg-black">
+          <InfiniteMovingCards
+            items={voucherlogo1}
+            direction="left"
+            speed="normal"
+          />
+        </div>
+        <div className="dark:bg-grid-white/[0.05] relative flex flex-col overflow-hidden rounded-md bg-white py-4 antialiased dark:bg-black">
+          <InfiniteMovingCards
+            items={voucherlogo2}
+            direction="right"
+            speed="normal"
+          />
         </div>
       </section>
 
-      {/* 호버 할때 배경변경되는 섹션 */}
-      <VoucherMeritBG />
-
       <section className=" w-full bg-white">
-        <div className="mx-auto flex max-w-7xl py-20">
+        <div className="mx-auto flex max-w-7xl flex-row py-20">
           <MotionDiv
             whileInView={{ y: 0, opacity: 1 }}
             initial={{ y: 30, opacity: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 1, delay: 0.1 }}
             className=""
           >
-            <SectionTitle
-              title="Issue"
-              descripstion="새로운 스팩스페이스 소식을 확인해보세요."
-            />
-            <Button className="bg-[#EDEDED] text-[#131313] hover:bg-gray-500">
-              뉴스룸 바로가기
-            </Button>
+            <div className="flex flex-col gap-6">
+              <p className=" font-preMedium text-BM24 text-[#47BFEF]">
+                NewROOM
+              </p>
+              <h3 className="whitespace-pre-line break-keep font-preSemiBold text-HB60 text-black">
+                {`Sfacspace's technology is
+                constantly evolving.`}
+              </h3>
+              <h6 className="whitespace-pre-line text-BM24">
+                스팩스페이스의 최신 소식을 만나보세요.
+              </h6>
+            </div>
+            <div className="flex gap-3">
+              <Button className="rounded-full bg-[#EDEDED] py-4 text-BB20 text-[#131313] hover:bg-gray-500">
+                뉴스룸 바로가기
+                <ArrowUpRight
+                  color="#ffffff"
+                  className="rounded-full bg-black"
+                />
+              </Button>
+            </div>
           </MotionDiv>
-          <Carousel
-            opts={{
-              align: 'start',
-            }}
-            className="w-full flex-1"
-          >
-            <CarouselContent>
-              {pracImg.map((e, idx) => (
-                <CarouselItem
-                  className={idx === 0 ? 'basis-1/3' : 'basis-1/3'}
-                  // eslint-disable-next-line react/no-array-index-key
-                  key={idx}
-                >
-                  <MainNewsCard
-                    img={e.img}
-                    title={e.title}
-                    content={e.content}
-                  />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="bg-white" />
-            <CarouselNext className="bg-white" />
-          </Carousel>
+          <MainNewsCard title="asdszzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzad" />
         </div>
       </section>
     </main>

@@ -21,7 +21,7 @@ export default function VoucherMeritBG() {
   return (
     <div
       className={cn(
-        'flex w-full items-center bg-black bg-opacity-50 duration-500',
+        'relative mx-auto flex w-full max-w-[1820px] items-center rounded-3xl bg-black bg-opacity-50 duration-500',
         hoveredCard === 0
           ? 'bg-meritimg1 bg-cover opacity-100'
           : hoveredCard === 1
@@ -31,6 +31,9 @@ export default function VoucherMeritBG() {
               : 'bg-meritimg1 bg-cover opacity-100',
       )}
     >
+      <div className=" absolute top-0 px-40 py-20 text-[32px] font-bold text-white">
+        VOUCHER Merit
+      </div>
       {voucherMerit.map((e, idx) => (
         <div
           key={idx}

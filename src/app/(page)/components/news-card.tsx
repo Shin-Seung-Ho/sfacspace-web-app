@@ -1,22 +1,17 @@
 'use client';
 
-import Image from 'next/image';
+import { ArrowUpRight } from 'lucide-react';
 import { Card, CardDescription, CardTitle } from '@/components/ui/card';
 
 interface MainNewsCardProps {
-  img: string;
-  title: string;
-  content: string;
+  title?: string;
+  content?: string;
 }
 
-export default function MainNewsCard({
-  img,
-  title,
-  content,
-}: MainNewsCardProps) {
+export default function MainNewsCard({ title, content }: MainNewsCardProps) {
   return (
-    <Card>
-      <Image src={img} width={200} height={200} alt="newsImg" />
+    <Card className="p-6">
+      <ArrowUpRight color="#FFFFFF" className="rounded-full bg-black" />
       <CardTitle>{title}</CardTitle>
       <CardDescription className=" line-clamp-2">{content}</CardDescription>
     </Card>
