@@ -43,7 +43,7 @@ export default function Page() {
       </section> */}
 
       <section className="w-full">
-        <div className="relative h-[800px]">
+        <div className="mobile:h-[800px] relative h-[400px]">
           <Image
             src="/history/history-bg.png"
             width={1440}
@@ -52,24 +52,24 @@ export default function Page() {
             alt="historybg"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-8">
-            <div className="flex flex-col items-center gap-36 text-white">
+            <div className="mobile:gap-36 flex flex-col items-center gap-6 text-white">
               <MotionDiv
                 whileInView={{ y: 0, opacity: 1, scale: 1 }}
                 initial={{ y: 10, opacity: 0, scale: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
               >
-                <h2 className=" text-HB60">
+                <h2 className="mobile:text-HB60 max-mobile:px-10 break-keep text-center text-HB28">
                   과거에서부터 미래를 향한 우리의 성장 이야기
                 </h2>
               </MotionDiv>
-              <div className="flex max-w-7xl gap-10 whitespace-pre-line break-keep text-BR20 text-[#A0A0A0]">
-                <p>
+              <div className="mobile:text-BR20 flex max-w-7xl gap-10 whitespace-pre-line break-keep text-BR12 text-[#A0A0A0]">
+                <p className="max-mobile:hidden">
                   (주) 스팩스페이스는 NLP와 Computer Vision을 기반으로 한 AI
                   솔루션 전문 기업입니다. 우리는 인공지능 관련 특허 16건 출원과
                   혁신성장유형 벤처인증 취득 등의 성과를 바탕으로 대외적으로
                   기술력을 검증받았습니다.
                 </p>
-                <p>
+                <p className="max-mobile:px-5">
                   스팩스페이스의 연구와 노력으로 혁신적이고 탁월한 AI 솔루션을
                   제공하고있습니다. 스팩스페이스의 히스토리에서 성장과 발전을
                   자세히 살펴볼 수 있습니다. 같이 나아가며 성장하는 여정에

@@ -24,15 +24,15 @@ export const links = [
       { href: '/company/press', label: '뉴스룸' },
     ],
   },
-  {
-    href: '/services',
-    label: '서비스',
-    subMenuItems: [
-      { href: '/', label: '장전' },
-      { href: '/', label: '집찍고' },
-      { href: 'https://sniperfactory.com/', label: '스나이퍼팩토리' },
-    ],
-  },
+  // {
+  //   href: '/services',
+  //   label: '서비스',
+  //   subMenuItems: [
+  //     { href: '/', label: '장전' },
+  //     { href: '/', label: '집찍고' },
+  //     { href: 'https://sniperfactory.com/', label: '스나이퍼팩토리' },
+  //   ],
+  // },
   {
     href: '/vouchers',
     label: '바우처',

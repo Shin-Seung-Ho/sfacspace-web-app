@@ -10,8 +10,8 @@ interface NewsCardProps {
 
 export default function NewsCard({ src, day, title, content }: NewsCardProps) {
   return (
-    <Card className="group/bento row-span-1 flex flex-col justify-between gap-4 space-y-4 rounded-xl border bg-white p-4 py-4 shadow-input transition duration-200 hover:border-0 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none">
-      <div className="flex w-full  items-center justify-center">
+    <Card className="group/bento mobile:gap-4 row-span-1 flex flex-col justify-between gap-1 space-y-4 rounded-xl border bg-white p-4 py-4 shadow-input transition duration-200 hover:border-0 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none">
+      <div className="flex w-full items-center justify-center">
         <Image
           src={src}
           width={360}
