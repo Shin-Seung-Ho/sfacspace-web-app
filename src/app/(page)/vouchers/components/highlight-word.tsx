@@ -11,7 +11,7 @@ export default function HighlightWord({
   const parts = text.split(new RegExp(`(${highlightWords})`, 'gi'));
   return (
     <div className="relative">
-      <p className="z-50 text-HB48 font-extrabold">
+      <p className="mobile:text-HB48 z-50 text-BB20 font-extrabold">
         {parts.map((part, index) =>
           part.toLowerCase() === highlightWords.toLowerCase() ? (
             <span
