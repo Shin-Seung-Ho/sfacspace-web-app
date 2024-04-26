@@ -8,12 +8,12 @@ interface VoucherMeritProps {
 
 export default function VoucherMerit({ voucher }: VoucherMeritProps) {
   return (
-    <section className=" bg-[#F7F7F7] py-44">
-      <div className="mx-auto flex max-w-7xl flex-col gap-32">
-        <div className="text-HB60 font-extrabold">
+    <section className=" mobile:py-44 bg-[#F7F7F7] py-20">
+      <div className="mobile:gap-32 mx-auto flex max-w-7xl flex-col gap-12">
+        <div className="mobile:text-HB60 mobile:w-full mobile:font-extrabold mobile:px-0 w-3/4 break-keep px-5 text-BB24 font-bold">
           스팩스페이스의 {voucher}는 <br /> 이런 것들이 있어요
         </div>
-        <div className="flex gap-3">
+        <div className="mobile:flex-row mobile:px-0 flex flex-col gap-3 px-5">
           {voucherMerit2.map((e, idx) => (
             <MeritCard
               key={idx}

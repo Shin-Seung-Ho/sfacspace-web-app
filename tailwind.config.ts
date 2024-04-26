@@ -17,6 +17,15 @@ const config = {
         '2xl': '1400px',
       },
     },
+    screens: {
+      mobile: '415px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      xxl: '1441px',
+      screen: '1580px',
+    },
     extend: {
       backgroundImage: {
         sfacspace: 'url("/bottom-sfac-logo.svg")',

@@ -75,7 +75,7 @@ export function InfiniteMovingVoucherCards({
     <div
       ref={containerRef}
       className={cn(
-        'scroller relative z-20 overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
+        'scroller max-mobile:max-w-[415px] mobile:w-auto relative z-20 w-full overflow-hidden',
         className,
       )}
     >
@@ -89,7 +89,7 @@ export function InfiniteMovingVoucherCards({
       >
         {voucherBusiness.map((item, index) => (
           <li
-            className="relative w-[350px] max-w-full flex-shrink-0 rounded-2xl border border-b-0 border-slate-700 px-8 py-6 md:w-[450px]"
+            className="mobile:px-8 mobile:py-6 mobile:w-[350px] relative w-[280px] max-w-full flex-shrink-0 rounded-2xl border border-b-0 border-slate-700 px-4 py-2 md:w-[450px]"
             style={{
               background:
                 'linear-gradient(180deg, var(--slate-800), var(--slate-900)',
@@ -102,14 +102,18 @@ export function InfiniteMovingVoucherCards({
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)] rounded-3xl bg-white bg-opacity-50"
               />
               <span className=" relative z-20 text-sm font-normal leading-[1.6] text-gray-100">
-                <img src={item.voucherlogo} alt={item.name} />
+                <img
+                  src={item.voucherlogo}
+                  alt={item.name}
+                  className=" max-mobile:h-20"
+                />
               </span>
               <div className="relative z-20 flex flex-row items-center">
                 <span className="flex flex-col gap-3">
-                  <span className=" text-BM24 leading-[1.6] text-white">
+                  <span className=" mobile:text-BM24 text-BB16 leading-[1.6] text-white">
                     {item.name}
                   </span>
-                  <span className=" text-BR16 leading-[1.6] text-[#C4C4C4]">
+                  <span className=" mobile:text-BR16 text-BR12 leading-[1.6] text-[#C4C4C4]">
                     {item.description}
                   </span>
                 </span>
