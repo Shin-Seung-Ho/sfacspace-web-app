@@ -34,7 +34,7 @@ export default function VoucherBottom() {
           </div>
           <InfiniteMovingVoucherCards />
           <div className="mobile:flex-col max-mobile:px-4 mobile:gap-14 flex flex-row items-center gap-4">
-            <p className=" mobile:text-[32px] w-1/2 break-keep text-BB24 font-bold text-white">
+            <p className=" mobile:text-[32px] mobile:w-full w-1/2 break-keep text-center text-BB24 font-bold text-white">
               스팩스페이스의 다양한 바우처를 만나보세요!
             </p>
             <div className="mobile:gap-6 mobile:text-BM24 mobile:flex-row mobile:items-center mobile:w-full flex w-1/2 flex-col items-end gap-3 text-[14px] text-white">

@@ -294,6 +294,30 @@ const config = {
             lineHeight: '140%',
           },
         ],
+        BB14: [
+          '14px',
+          {
+            fontWeight: 600,
+            letterSpacing: '-0.03em',
+            lineHeight: '140%',
+          },
+        ],
+        BM14: [
+          '14px',
+          {
+            fontWeight: 500,
+            letterSpacing: '-0.03em',
+            lineHeight: '140%',
+          },
+        ],
+        BR14: [
+          '14px',
+          {
+            fontWeight: 300,
+            letterSpacing: '-0.03em',
+            lineHeight: '140%',
+          },
+        ],
         BB12: [
           '12px',
           {
