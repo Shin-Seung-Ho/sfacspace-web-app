@@ -24,7 +24,7 @@ export default function ItemCard({
 }: ItemCardProps) {
   return (
     <Card
-      className={`relative flex h-[300px] w-full items-center rounded-3xl ${bgcolor}`}
+      className={`mobile:h-[300px] max-mobile:mx-5 relative flex h-[200px] w-full items-center rounded-3xl ${bgcolor}`}
     >
       <Image
         src={bgimg}

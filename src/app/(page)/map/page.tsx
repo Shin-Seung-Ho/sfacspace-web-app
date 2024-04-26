@@ -3,13 +3,13 @@ import React from 'react';
 
 export default function CompanyMap() {
   return (
-    <main className="bg-black py-20">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-2 text-white">
-        <p className=" mobile:text-[32px] mobile:font-bold py-12 text-BB20">
+    <main className="bg-black py-10">
+      <div className="mobile:py-16 mx-auto flex max-w-7xl flex-col items-center gap-2 py-10 text-white">
+        <p className=" mobile:text-[32px] mobile:font-bold mobile:py-5 py-3 text-BB20">
           오시는길
         </p>
         <div className="h-px w-full bg-gradient-to-r from-black via-[#73B8F7] to-black opacity-70" />
-        <p className=" mobile:text-BR20 max-mobile:font-normal py-8 text-[14px] text-[#9D9D9D]">
+        <p className=" mobile:text-BR20 max-mobile:font-normal mobile:py-5 py-3 text-[14px] text-[#9D9D9D]">
           서울특별시 강서구 마곡중앙2로 11 305호
         </p>
         <iframe
@@ -23,7 +23,7 @@ export default function CompanyMap() {
           className=" max-mobile:px-4 w-full rounded-3xl"
           referrerPolicy="no-referrer-when-downgrade"
         />
-        <div className="gap- mobile:py-28 flex w-full flex-col gap-24 py-24">
+        <div className="mobile:py-28 mobile:gap-24 flex w-full flex-col gap-16 py-16">
           <div className="mobile:flex-row mobile:items-start mobile:gap-24 flex flex-col items-center gap-5">
             <Image src="/map/bus.svg" width={180} height={0} alt="bus" />
             <div className="max-mobile:text-center max-mobile:items-center flex flex-col gap-6">
