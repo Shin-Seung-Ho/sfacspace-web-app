@@ -40,7 +40,7 @@ const voucher = [
 
 export default function VoucherCards() {
   return (
-    <div className="grid grid-cols-6 gap-4 py-20">
+    <div className="flex gap-4 py-5 mobile:grid mobile:grid-cols-6 mobile:py-20">
       {voucher.map((item, index) => (
         <div
           key={index}
@@ -53,7 +53,7 @@ export default function VoucherCards() {
                 <h2 className="text-lg font-bold text-white">{item.voucher}</h2>
                 <ArrowUpRight className="rounded-full bg-white" />
               </div>
-              <p className="w-3/5 whitespace-pre-line break-keep text-white">
+              <p className="w-3/5 whitespace-pre-line break-keep text-white max-mobile:text-BM14">
                 {item.content}
               </p>
             </div>

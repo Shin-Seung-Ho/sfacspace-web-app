@@ -1,7 +1,6 @@
 import { ArrowUpRight, ChevronsDown, Mouse } from 'lucide-react';
-// import Image from 'next/image';
 import Image from 'next/image';
-import { voucherlogo1, voucherlogo2 } from './config/constants';
+import { pressData, voucherlogo1, voucherlogo2 } from './config/constants';
 import MotionDiv from '@/components/common/motion-div';
 import SectionTitle from './(page)/components/section-title';
 import { Button } from '@/components/ui/button';
@@ -83,12 +82,12 @@ export default function Home() {
             objectFit="cover"
             alt="spacebg"
           />
-          <div className=" absolute mx-auto flex w-full max-w-7xl justify-between">
+          <div className=" absolute mx-auto flex w-full max-w-7xl flex-col justify-between max-mobile:px-5 mobile:flex-row">
             <MotionDiv
               whileInView={{ y: 0, opacity: 1 }}
               initial={{ y: 30, opacity: 0 }}
               transition={{ duration: 1, delay: 0.1 }}
-              className="flex flex-col items-center"
+              className="flex flex-col items-start mobile:items-center"
             >
               <SectionTitle
                 title={`계속되는 도전,
@@ -102,7 +101,7 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               initial={{ y: 30, opacity: 0 }}
               transition={{ duration: 1, delay: 0.1 }}
-              className="w-1/2"
+              className="w-full mobile:w-1/2"
             >
               <SolutionCard />
             </MotionDiv>
@@ -118,11 +117,11 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.1 }}
           >
             <div className="flex flex-col">
-              <p className=" font-preMedium text-BM24 text-[#47BFEF]">
+              <p className="text-BM12 text-[#47BFEF] mobile:text-BM24">
                 Voucher
               </p>
               <h3
-                className={` whitespace-pre-line break-keep text-HB48 font-bold text-black`}
+                className={` whitespace-pre-line break-keep text-BB20 font-semibold text-[#131313] mobile:text-HB48 mobile:font-bold`}
               >
                 6,000만원 규모
                 <br /> AI 가공 솔루션 지원 사업을
@@ -150,23 +149,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className=" w-full bg-white">
-        <div className="mx-auto flex max-w-7xl flex-row py-20">
+      <section className="w-full bg-white">
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-28 py-20 mobile:flex-row">
           <MotionDiv
             whileInView={{ y: 0, opacity: 1 }}
             initial={{ y: 30, opacity: 0 }}
             transition={{ duration: 1, delay: 0.1 }}
-            className=""
+            className="flex flex-col gap-12"
           >
-            <div className="flex flex-col gap-6">
-              <p className=" font-preMedium text-BM24 text-[#47BFEF]">
-                NewROOM
+            <div className="flex flex-col gap-2">
+              <p className="text-BM12 text-[#47BFEF] mobile:font-preMedium mobile:text-BM24">
+                NEWSROOM
               </p>
-              <h3 className="whitespace-pre-line break-keep font-preSemiBold text-HB60 text-black">
+              <h3 className="whitespace-pre-line break-keep text-HB28 font-bold text-[#131313] mobile:font-preSemiBold mobile:text-HB60">
                 {`Sfacspace's technology is
                 constantly evolving.`}
               </h3>
-              <h6 className="whitespace-pre-line text-BM24">
+              <h6 className="whitespace-pre-line text-BR16 mobile:text-BM24">
                 스팩스페이스의 최신 소식을 만나보세요.
               </h6>
             </div>
@@ -180,7 +179,16 @@ export default function Home() {
               </Button>
             </div>
           </MotionDiv>
-          <MainNewsCard title="asdszzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzad" />
+          <div className="scrollbar-hide flex h-[180px] flex-row gap-4 overflow-y-auto mobile:h-[960px] mobile:w-[420px] mobile:flex-col">
+            {pressData.map((e) => (
+              <MainNewsCard
+                title={e.title}
+                day={e.day}
+                content={e.content}
+                bgimg={e.src}
+              />
+            ))}
+          </div>
         </div>
       </section>
     </main>

@@ -15,14 +15,14 @@ export default function SectionTitle({
 }: SectionTitleProps) {
   return (
     <div className={`flex flex-col ${textCenter === true && 'text-center'}`}>
-      <p className=" font-preMedium text-BM24 text-[#47BFEF]">SFACSPACE</p>
+      <p className="text-BM12 text-[#47BFEF] mobile:text-BM24">SFACSPACE</p>
       <h3
-        className={` whitespace-pre-line break-keep text-black ${textWhite === true && 'text-white'} ${titlefont ? 'text-HB80 font-extrabold' : 'font-preSemiBold text-HB60'}`}
+        className={` whitespace-pre-line break-keep text-black ${textWhite === true && 'text-white'} ${titlefont ? 'text-HB80 font-extrabold' : 'font-preSemiBold text-BB24 max-mobile:font-bold mobile:text-HB60'}`}
       >
         {title}
       </h3>
       <h6
-        className={`whitespace-pre-line text-[20px] font-normal ${textWhite === true && 'text-white'}`}
+        className={`whitespace-pre-line text-BR12 font-normal mobile:text-[20px] mobile:font-normal ${textWhite === true && 'text-white'}`}
       >
         {descripstion}
       </h6>

@@ -21,7 +21,7 @@ export default function VoucherMeritBG() {
   return (
     <div
       className={cn(
-        'relative mx-auto flex w-full max-w-[1820px] items-center rounded-3xl bg-black bg-opacity-50 duration-500',
+        'relative mx-auto flex w-full max-w-[1820px] items-center rounded-3xl bg-black bg-opacity-50 duration-500 max-mobile:hidden',
         hoveredCard === 0
           ? 'bg-meritimg1 bg-cover opacity-100'
           : hoveredCard === 1
