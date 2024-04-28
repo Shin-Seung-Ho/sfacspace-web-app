@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   Select,
   SelectContent,
@@ -20,14 +21,14 @@ export default function BottomBar() {
         alt="bottom-sfac-logo"
         className=" absolute"
       />
-      <section className="relative z-10 mx-auto flex max-w-7xl flex-col gap-6 py-24">
+      <section className="relative z-10 mx-auto flex max-w-7xl flex-col gap-6 py-10 max-mobile:pt-16 mobile:py-24">
         <Image
           src="/sfacspace-logo.svg"
           width={100}
           height={50}
           alt="sfacspace-logo"
         />
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-col-reverse justify-between max-mobile:gap-10 mobile:flex-row">
           <div className="flex flex-col gap-4 font-preRegular text-BR12 text-white">
             <div className="flex flex-col">
               <div className="flex gap-2 text-[#A4A4A4]">
@@ -45,32 +46,43 @@ export default function BottomBar() {
                 <p className=" text-[#A4A4A4]">
                   Tel <span className="text-white"> 02-6217-1119</span>
                 </p>
-                <p>|</p>
-                <p className=" text-[#A4A4A4]">
-                  Tel <span className="text-white"> 450-87-01864</span>
+                <p className="max-mobile:hidden">|</p>
+                <p className=" text-[#A4A4A4] max-mobile:hidden">
+                  Fax <span className="text-white"> 02-6217-1115</span>
                 </p>
               </div>
-              <p className=" text-[#A4A4A4]">
-                Mail <span className="text-white"> admin@sfacspace.com</span>
-              </p>
+              <div className="flex flex-row gap-2">
+                <p className=" text-[#A4A4A4]">
+                  Mail <span className="text-white"> admin@sfacspace.com</span>
+                </p>
+                <p className="mobile:hidden">|</p>
+                <p className=" text-[#A4A4A4] mobile:hidden">
+                  Fax <span className="text-white"> 02-6217-1115</span>
+                </p>
+              </div>
             </div>
-            <div>
-              <p>개인정보 처리방침</p>
-              <p>2024 스팩스페이스 Co.All rights reserved</p>
-            </div>
+            <p>2024 스팩스페이스 Co.All rights reserved</p>
           </div>
-          <Select>
-            <SelectTrigger className="w-[180px] border-[#A4A4A4] bg-transparent text-[#A4A4A4]">
-              <SelectValue placeholder="패밀리사이트" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="familysite">패밀리사이트</SelectItem>
-              <SelectItem value="insideout">
-                인사이드아웃 사회적협동조합
-              </SelectItem>
-              <SelectItem value="sniperfactory">스나이퍼팩토리</SelectItem>
-            </SelectContent>
-          </Select>
+          <div className="flex flex-row gap-6 text-BR12 text-[#A4A4A4] max-mobile:justify-between mobile:flex-col">
+            <div className="flex flex-col">
+              <Link href="/map">
+                <p>오시는길</p>
+              </Link>
+              <p>개인정보 처리방침</p>
+            </div>
+            <Select>
+              <SelectTrigger className="w-[180px] border-[#A4A4A4] bg-transparent text-[#A4A4A4]">
+                <SelectValue placeholder="패밀리사이트" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="familysite">패밀리사이트</SelectItem>
+                <SelectItem value="insideout">
+                  인사이드아웃 사회적협동조합
+                </SelectItem>
+                <SelectItem value="sniperfactory">스나이퍼팩토리</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
         </div>
       </section>
     </footer>
