@@ -40,17 +40,19 @@ const voucher = [
 
 export default function VoucherCards() {
   return (
-    <div className="flex gap-4 py-5 mobile:grid mobile:grid-cols-6 mobile:py-20">
+    <div className="flex gap-4 py-5 max-mobile:overflow-x-auto max-mobile:pl-2 max-mobile:scrollbar-hide mobile:grid mobile:grid-cols-6 mobile:py-20">
       {voucher.map((item, index) => (
         <div
           key={index}
-          className={`col-span-2 ${index === 3 && 'col-span-3'} ${index === 4 && 'col-span-3'} h-60 rounded-[20px] bg-cover`}
+          className={`col-span-2 ${index === 3 && 'col-span-3'} ${index === 4 && 'col-span-3'} h-[160px] rounded-[20px] bg-cover mobile:h-60`}
           style={{ backgroundImage: `url(${item.bg})` }}
         >
           <Link href={item.href}>
-            <div className="flex h-60 flex-col gap-4 rounded-[20px] bg-black bg-opacity-50 p-10">
+            <div className="flex h-[160px] flex-col gap-4 rounded-[20px] bg-black bg-opacity-50 p-8 max-mobile:w-[350px] mobile:h-60 mobile:p-10">
               <div className="flex items-center gap-4">
-                <h2 className="text-lg font-bold text-white">{item.voucher}</h2>
+                <h2 className="text-BB20 text-white mobile:text-lg mobile:font-bold">
+                  {item.voucher}
+                </h2>
                 <ArrowUpRight className="rounded-full bg-white" />
               </div>
               <p className="w-3/5 whitespace-pre-line break-keep text-white max-mobile:text-BM14">

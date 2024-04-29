@@ -24,11 +24,11 @@ export default function StyleUnderLineText({
   };
 
   return (
-    <div className="relative flex justify-center gap-20 py-12 font-bold">
+    <div className="relative flex justify-center gap-5 py-12 font-bold mobile:gap-20">
       {service.map((text, idx) => (
         <div key={idx} className="relative cursor-pointer">
           <div
-            className={`relative z-50 text-HB28 font-bold ${selectedText === text ? '' : ' text-[#929292]'}`}
+            className={`relative z-50 text-BB16 mobile:text-HB28 mobile:font-bold ${selectedText === text ? '' : ' text-[#929292]'}`}
             onClick={() => handleClick(text, idx)}
           >
             {text}
