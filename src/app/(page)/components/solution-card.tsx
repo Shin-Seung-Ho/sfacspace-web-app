@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import MotionDiv from '@/components/common/motion-div';
@@ -12,7 +13,7 @@ export default function SolutionCard() {
 
   return (
     <div className="flex h-full flex-col items-start justify-end gap-5 mobile:flex-row mobile:items-center">
-      <div className="flex flex-col gap-4 text-white">
+      <div className="flex flex-col items-center gap-4 text-white max-mobile:py-12">
         {/* Vision을 클릭했을 때 */}
         <div className="relative cursor-pointer">
           <p
@@ -52,13 +53,15 @@ export default function SolutionCard() {
             <CardTitle className=" text-HB28 max-mobile:font-bold mobile:text-HB48">
               Computer Vision
             </CardTitle>
-            <CardContent className=" w-3/4 whitespace-pre-line break-keep py-5 text-BR16 mobile:text-BR20">
+            <CardContent className="w-3/4 whitespace-pre-line break-keep py-5 text-BR16 mobile:text-BR20">
               인공지능을 통해 이미지와 비디오에서 오브젝트를 인식하고 변형하는
               솔루션
             </CardContent>
-            <Button className=" mt-10 rounded-full bg-[#73B8F7] py-6 text-black max-mobile:text-BM16">
-              자세히 보러가기 <ArrowRight className="h-5 w-5" />
-            </Button>
+            <Link href="/solution/vision">
+              <Button className=" mt-10 rounded-full bg-[#73B8F7] py-6 text-black max-mobile:text-BM16">
+                자세히 보러가기 <ArrowRight className="h-5 w-5" />
+              </Button>
+            </Link>
           </Card>
         </MotionDiv>
       )}
@@ -67,17 +70,21 @@ export default function SolutionCard() {
           whileInView={{ x: 0, opacity: 1 }}
           initial={{ x: 30, opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="h-full w-3/4"
+          className="h-full w-full mobile:w-3/4"
         >
           <Card className="h-full border-[#666666] bg-white bg-opacity-10 p-10 text-white backdrop-blur-sm">
-            <CardTitle className="text-HB48">NLP</CardTitle>
-            <CardContent className=" w-4/5 whitespace-pre-line break-keep py-5 text-BR20">
+            <CardTitle className="text-HB28 max-mobile:font-bold mobile:text-HB48">
+              NLP
+            </CardTitle>
+            <CardContent className=" w-4/5 whitespace-pre-line break-keep py-5 text-BR16 mobile:text-BR20">
               내용 요약, 번역, 감성 분석, 텍스트 분류 등에서 자주 활용되는
               자연어 분석 및 처리
             </CardContent>
-            <Button className="mt-10 rounded-full bg-[#73B8F7] py-6 text-black">
-              자세히 보러가기 <ArrowRight className="h-5 w-5" />
-            </Button>
+            <Link href="/solution/nlp">
+              <Button className="mt-10 rounded-full bg-[#73B8F7] py-6 text-black">
+                자세히 보러가기 <ArrowRight className="h-5 w-5" />
+              </Button>
+            </Link>
           </Card>
         </MotionDiv>
       )}

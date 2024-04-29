@@ -80,7 +80,7 @@ export function InfiniteMovingCards({
       <ul
         ref={scrollerRef}
         className={cn(
-          ' flex w-max min-w-full shrink-0 gap-4 py-4',
+          ' flex w-max min-w-full shrink-0 gap-4 py-0 mobile:py-4',
           start && 'animate-scroll ',
           pauseOnHover && 'hover:[animation-play-state:paused]',
         )}
@@ -88,7 +88,7 @@ export function InfiniteMovingCards({
         {items.map((item, idx) => (
           <Link href="/business-company">
             <li
-              className="relative max-w-full px-4"
+              className="relative max-w-full px-4 max-mobile:w-[170px]"
               style={{
                 background:
                   'linear-gradient(180deg, var(--slate-800), var(--slate-900)',
